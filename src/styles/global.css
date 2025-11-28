@@ -1,1 +1,10 @@
 @import "tailwindcss";
+@import "./colors.css";
+
+@theme {
+    --color-primary: var(--primary-color);
+    --color-secondary: var(--secondary-color);
+    --color-sec-dark: var(--secondary-color-dark);
+    --color-sec-darker: var(--secondary-color-darker);
+    --color-resalt: var(--resalt-color);
+}
