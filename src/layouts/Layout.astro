@@ -3,25 +3,27 @@ import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio - Giovanni</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Portfolio - Giovanni</title>
+    </head>
+    <body class="bg-linear-150 from-primary to-secondary">
+        <slot />
+    </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		height: 100%;
-	}
+    html,
+    body {
+        display: grid;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        grid-template-rows: auto 1fr auto;
+    }
 </style>
