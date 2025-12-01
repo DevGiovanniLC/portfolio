@@ -1,0 +1,28 @@
+---
+const { href, className, mainSpinColor, alternateSpinColor } = Astro.props;
+---
+
+<a
+	href={href}
+	target="_blank"
+	rel="noopener"
+	class={`flex items-center transition justify-center hover:scale-105`}
+>
+	<div class="flex items-center">
+		<span class="relative inline-flex overflow-hidden rounded-full p-px">
+			<span
+				style={`
+                    --c1: #${mainSpinColor};
+                    --c2: #${alternateSpinColor};
+                `}
+				class={`absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,var(--c1)_0%,var(--c2)_50%,var(--c1)_100%)]`}
+			>
+			</span>
+			<div
+				class={`inline-flex items-center justify-center w-full text-sm rounded-full cursor-pointer backdrop-blur-3xl whitespace-nowrap ${className}`}
+			>
+				<slot />
+			</div>
+		</span>
+	</div>
+</a>
