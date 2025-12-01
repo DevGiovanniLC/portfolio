@@ -1,10 +1,32 @@
 @import "tailwindcss";
 @import "./colors.css";
+@import "./text.css";
 
 @theme {
+    /* Colores */
     --color-primary: var(--primary-color);
-    --color-secondary: var(--secondary-color);
-    --color-sec-dark: var(--secondary-color-dark);
-    --color-sec-darker: var(--secondary-color-darker);
+    --color-primary-dark: var(--primary-color-dark);
+    --color-primary-darker: var(--primary-color-darker);
     --color-resalt: var(--resalt-color);
+
+    /* Tamaños de texto */
+    --text-title: var(--text-title-size);
+    --text-subtitle: var(--text-subtitle-size);
+    --text-base: var(--text-base-size);
+
+
+
+    --animate-fade-in-scale: fade-in-scale 0.3s ease-out;
+
+    @keyframes fade-in-scale {
+        0% {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
 }
