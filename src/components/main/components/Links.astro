@@ -2,9 +2,9 @@
 import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 ---
 
-<div class="flex flex-row flex-wrap mb-2 ml-6 gap-6 items-center">
+<div id="wrapper" class="flex flex-row flex-wrap mb-2 ml-6 gap-6 items-center">
 	<img
-		src="/src/assets/perfil.webp"
+		src="perfil.webp"
 		alt="Giovanni León"
 		class="w-45 h-45 rounded-full select-none border-2 border-[#46ad6f]"
 	/>
@@ -17,14 +17,14 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 			className="bg-sky-900 text-zinc-100 gap-2 px-3 py-2"
 		>
 			<img
-				src="/src/assets/icons/linkedin-mark.svg"
+				src="icons/linkedin-mark.svg"
 				alt="Giovanni León LinkedIn"
 				class="w-5 h-5"
 			/>
 			Disponible para trabajar
 		</AnimateAnchor>
 
-		<div class="flex flex-row flex-wrap gap-1">
+		<div class="flex flex-row flex-wrap gap-2">
 			<AnimateAnchor
 				href="https://github.com/DevGiovanniLC"
 				mainSpinColor="A8A29E"
@@ -32,7 +32,7 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 				className="bg-zinc-400 text-zinc-100 gap-2 px-4 py-2"
 			>
 				<img
-					src="/src/assets/icons/github-mark.svg"
+					src="icons/github-mark.svg"
 					alt="Giovanni León GitHub"
 					class="w-5 h-5"
 				/>
@@ -46,7 +46,7 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 				className="bg-green-800 text-zinc-100 gap-2 px-4 py-2"
 			>
 				<img
-					src="/src/assets/icons/hackerrank-mark.svg"
+					src="icons/hackerrank-mark.svg"
 					alt="Giovanni León HackerRank"
 					class="w-5 h-5"
 				/>
@@ -55,12 +55,12 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 
 			<AnimateAnchor
 				href="https://tryhackme.com/p/giovannilc.dev"
-				mainSpinColor="006301"
-				alternateSpinColor="75FF76"
-				className="bg-orange-950 text-zinc-100 gap-2 px-4 py-2"
+				mainSpinColor="F54927"
+				alternateSpinColor="2B0800"
+				className="bg-orange-900 text-zinc-100 gap-2 px-4 py-2"
 			>
 				<img
-					src="/src/assets/icons/tryhackme-mark.svg"
+					src="icons/tryhackme-mark.svg"
 					alt="Giovanni León Try Hack Me"
 					class="w-5 h-5"
 				/>
@@ -69,3 +69,12 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 		</div>
 	</div>
 </div>
+
+<style>
+	@media screen and (max-width: 1025px) {
+		div {
+			@apply items-center justify-center text-center;
+            margin-left: 0rem;
+		}
+	}
+</style>
