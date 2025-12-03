@@ -11,6 +11,7 @@ const { href, className, mainSpinColor, alternateSpinColor } = Astro.props;
 	<div class="flex items-center">
 		<span class="relative inline-flex overflow-hidden rounded-full p-px">
 			<span
+                id="border-color"
 				style={`
                     --c1: #${mainSpinColor};
                     --c2: #${alternateSpinColor};
@@ -26,3 +27,11 @@ const { href, className, mainSpinColor, alternateSpinColor } = Astro.props;
 		</span>
 	</div>
 </a>
+
+<style>
+    @media screen and (max-width: 800px) {
+        #border-color {
+            display: none;
+        }
+    }
+</style>
