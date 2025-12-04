@@ -2,7 +2,9 @@
 import Links from "./Links.astro";
 ---
 
-<section class="flex flex-col gap-4 text-primary py-12 px-8 animate-slide-out-down ">
+<section
+	class="flex flex-col gap-4 text-primary py-12 px-8 animate-slide-out-down"
+>
 	<Links />
 	<h1 class="font-semibold text-title font-title">Giovanni León Corujo</h1>
 
@@ -11,7 +13,11 @@ import Links from "./Links.astro";
 	</h2>
 
 	<p class="text-normal text-balance">
-		<strong >¡Hola! Soy Giovanni <span id="hand-move" class="absolute animate-ping opacity-75">👋</span>
+		<strong
+			>¡Hola! Soy Giovanni <span
+				id="hand-move"
+				class="absolute animate-ping opacity-75">👋</span
+			>
 			<span class="relative">👋</span></strong
 		>, un apasionado ingeniero informático especializado en <strong
 			>desarrollo web y móvil</strong
@@ -39,10 +45,13 @@ import Links from "./Links.astro";
 		border: 2px solid #6dffa7;
 	}
 
-    @media screen and (max-width: 750px) {
-        #hand-move {
-            display: none;
-        }
-    }
+	@media screen and (max-width: 750px) {
+		#hand-move {
+			display: none;
+		}
 
+		section {
+			border-radius: 1%;
+		}
+	}
 </style>

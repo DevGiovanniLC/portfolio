@@ -5,5 +5,15 @@ import Welcome from "./components/Welcome.astro";
 
 <main class="min-w-[360px] max-w-8/12 mx-auto py-10 flex flex-col gap-8">
 	<Welcome />
-    <TechStack />
+	<TechStack />
 </main>
+
+<style>
+	@media screen and (max-width: 750px) {
+		main {
+			max-width: 100%;
+			gap: 0;
+			padding: 0;
+		}
+	}
+</style>
