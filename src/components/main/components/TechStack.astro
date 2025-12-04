@@ -2,11 +2,14 @@
 import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 ---
 
-<section id="techs" class="flex flex-col gap-10 text-primary justify-center items-center">
+<section
+	id="techs"
+	class="flex flex-col gap-10 text-primary justify-center items-center"
+>
 	<h1 class="text-title font-title font-bold text-center">Tecnologías</h1>
 
 	<div
-		class="flex flex-wrap gap-6 justify-center max-w-10/12 text-normal font-['consolas']"
+		class="flex flex-wrap flex-col gap-8 justify-center items-center max-w-10/12 text-normal font-['consolas']"
 	>
 		<div id="Language" class="flex flex-wrap gap-2 justify-center w-full">
 			<AnimateAnchor
@@ -326,10 +329,11 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 		border: 2px solid #7a7a7a;
 		padding: 2em 2em;
 	}
+    
 
 	@media screen and (max-width: 750px) {
 		#techs span {
-            display: none;
+			display: none;
 		}
 	}
 </style>
