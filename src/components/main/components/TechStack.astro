@@ -1,13 +1,34 @@
 ---
-import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
+import BadgeTypeScript from "../../../shared/badges/BadgeTypeScript.astro";
+import BadgePython from "../../../shared/badges/BadgePython.astro";
+import BadgeJava from "../../../shared/badges/BadgeJava.astro";
+import BadgeGo from "../../../shared/badges/BadgeGo.astro";
+import BadgeSQL from "../../../shared/badges/BadgeSQL.astro";
+import BadgeBash from "../../../shared/badges/BadgeBash.astro";
+import BadgeJavaScript from "../../../shared/badges/BadgeJavaScript.astro";
+import BadgeHTML from "../../../shared/badges/BadgeHTML.astro";
+import BadgeCSS from "../../../shared/badges/BadgeCSS.astro";
+import BadgeAngular from "../../../shared/badges/BadgeAngular.astro";
+import BadgeReact from "../../../shared/badges/BadgeReact.astro";
+import BadgeAstro from "../../../shared/badges/BadgeAstro.astro";
+import BadgeTailwind from "../../../shared/badges/BadgeTailwind.astro";
+import BadgeIonic from "../../../shared/badges/BadgeIonic.astro";
+import BadgeNodeJS from "../../../shared/badges/BadgeNodeJS.astro";
+import BadgeJest from "../../../shared/badges/BadgeJest.astro";
+import BadgeCypress from "../../../shared/badges/BadgeCypress.astro";
+import BadgeAllure from "../../../shared/badges/BadgeAllure.astro";
+import BadgeIntelliJ from "../../../shared/badges/BadgeIntelliJ.astro";
+import BadgeAndroidStudio from "../../../shared/badges/BadgeAndroidStudio.astro";
+import BadgeVSCode from "../../../shared/badges/BadgeVSCode.astro";
+import BadgeDocker from "../../../shared/badges/BadgeDocker.astro";
 ---
 
 <section
 	id="techs"
-	class="flex flex-col gap-10 text-primary justify-center items-center py-12 animate-slide-in-up"
+	class="flex flex-col gap-10 text-primary justify-center items-center py-12 animated-section"
 >
 	<h1
-		class="text-title font-extrabold bg-linear-to-r from-cyan-400 to-fuchsia-500 bg-clip-text text-transparent"
+		class="text-title font-extrabold bg-linear-to-b from-cyan-400 to-fuchsia-500 bg-clip-text text-transparent"
 	>
 		Tech Stack
 	</h1>
@@ -16,310 +37,43 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 		class="flex flex-wrap flex-col gap-8 justify-center items-center max-w-10/12 text-normal font-['consolas']"
 	>
 		<div id="Language" class="flex flex-wrap gap-2 justify-center w-full">
-			<AnimateAnchor
-				href="https://www.typescriptlang.org"
-				mainSpinColor="264DE4"
-				alternateSpinColor="1a2d7d"
-				className="bg-blue-900 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-					alt="TypeScript"
-					class="w-5 h-5"
-				/>
-				<span>TypeScript</span>
-			</AnimateAnchor>
-
-			<AnimateAnchor
-				href="https://www.python.org"
-				mainSpinColor="3776AB"
-				alternateSpinColor="1a3a5f"
-				className="bg-green-800 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-					alt="Python"
-					class="w-5 h-5"
-				/>
-				<span>Python</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://www.java.com"
-				mainSpinColor="007396"
-				alternateSpinColor="003d5c"
-				className="bg-orange-900 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-					alt="Java"
-					class="w-5 h-5"
-				/>
-				<span>Java</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://go.dev"
-				mainSpinColor="00ADD8"
-				alternateSpinColor="006b8f"
-				className="bg-cyan-900 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg"
-					alt="Go"
-					class="w-5 h-5"
-				/>
-				<span>Go</span>
-			</AnimateAnchor>
-
-			<AnimateAnchor
-				href="https://www.sql.org"
-				mainSpinColor="336791"
-				alternateSpinColor="1a3a4d"
-				className="bg-blue-800 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg"
-					alt="SQL"
-					class="w-5 h-5"
-				/>
-				<span>SQL</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://www.gnu.org/software/bash"
-				mainSpinColor="4EAA25"
-				alternateSpinColor="000000"
-				className="bg-green-900 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"
-					alt="Bash"
-					class="w-5 h-5"
-				/>
-				<span>Bash</span>
-			</AnimateAnchor>
+			<BadgeTypeScript />
+			<BadgePython />
+			<BadgeJava />
+			<BadgeGo />
+			<BadgeSQL />
+			<BadgeBash />
 		</div>
 
 		<div
 			id="Frameworks"
 			class="flex flex-wrap gap-2 justify-center max-w-10/12"
 		>
-			<AnimateAnchor
-				href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-				mainSpinColor="F7DF1E"
-				alternateSpinColor="a89d0e"
-				className="bg-yellow-600 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-					alt="JavaScript"
-					class="w-5 h-5"
-				/>
-				<span>JavaScript</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://html.spec.whatwg.org"
-				mainSpinColor="E34C26"
-				alternateSpinColor="8a2817"
-				className="bg-red-700 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-					alt="HTML5"
-					class="w-5 h-5"
-				/>
-				<span>HTML</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://www.w3.org/Style/CSS"
-				mainSpinColor="563D7C"
-				alternateSpinColor="2d1f3d"
-				className="bg-indigo-700 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-					alt="CSS3"
-					class="w-5 h-5"
-				/>
-				<span>CSS</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://angular.dev"
-				mainSpinColor="F54927"
-				alternateSpinColor="FF00E3"
-				className="bg-pink-900 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
-					alt="Angular"
-					class="w-5 h-5"
-				/>
-				<span>Angular</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://reactjs.org"
-				mainSpinColor="61DAFB"
-				alternateSpinColor="1f6fa7"
-				className="bg-blue-700 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-					alt="React"
-					class="w-5 h-5"
-				/>
-				<span>React</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://astro.build"
-				mainSpinColor="FF5D01"
-				alternateSpinColor="994001"
-				className="bg-purple-600 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg"
-					alt="Astro"
-					class="w-5 h-5"
-				/>
-				<span>Astro</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://tailwindcss.com"
-				mainSpinColor="38B6FF"
-				alternateSpinColor="1a5f99"
-				className="bg-sky-600 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-					alt="Tailwind CSS"
-					class="w-5 h-5"
-				/>
-				<span>Tailwind CSS</span>
-			</AnimateAnchor>
-
-			<AnimateAnchor
-				href="https://ionicframework.com"
-				mainSpinColor="3B82F6"
-				alternateSpinColor="1e40af"
-				className="bg-blue-700 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ionic/ionic-original.svg"
-					alt="Ionic"
-					class="w-5 h-5"
-				/>
-				<span>Ionic</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://nodejs.org"
-				mainSpinColor="339933"
-				alternateSpinColor="1a5f1a"
-				className="bg-green-700 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
-					alt="Node.js"
-					class="w-5 h-5"
-				/>
-				<span>Node.js</span>
-			</AnimateAnchor>
+			<BadgeJavaScript />
+			<BadgeHTML />
+			<BadgeCSS />
+			<BadgeAngular />
+			<BadgeReact />
+			<BadgeAstro />
+			<BadgeTailwind />
+			<BadgeIonic />
+			<BadgeNodeJS />
 
 			<div
 				id="Testing"
 				class="flex flex-wrap gap-2 justify-center w-full"
 			>
-				<AnimateAnchor
-					href="https://jestjs.io"
-					mainSpinColor="C21325"
-					alternateSpinColor="7a0f1a"
-					className="bg-pink-500 text-zinc-100 gap-2 px-3 py-2"
-				>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg"
-						alt="Jest"
-						class="w-5 h-5"
-					/>
-					<span>Jest</span>
-				</AnimateAnchor>
-				<AnimateAnchor
-					href="https://www.cypress.io"
-					mainSpinColor="04B38A"
-					alternateSpinColor="026e50"
-					className="bg-emerald-700 text-zinc-100 gap-2 px-3 py-2"
-				>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cypressio/cypressio-original.svg"
-						alt="Cypress"
-						class="w-5 h-5"
-					/>
-					<span>Cypress.io</span>
-				</AnimateAnchor>
-				<AnimateAnchor
-					href="https://qameta.io/allure-report/"
-					mainSpinColor="FF4081"
-					alternateSpinColor="C2185B"
-					className="bg-pink-700 text-zinc-100 gap-2 px-3 py-2"
-				>
-					<img
-						src="icons/allure-report-icon.png"
-						alt="Allure Report"
-						class="w-5 h-5"
-					/>
-					<span>Allure Report</span>
-				</AnimateAnchor>
+				<BadgeJest />
+				<BadgeCypress />
+				<BadgeAllure />
 			</div>
 		</div>
 
 		<div id="Tools" class="flex flex-wrap gap-2 justify-center max-w-6/12">
-			<AnimateAnchor
-				href="https://www.jetbrains.com/idea/"
-				mainSpinColor="A93C30"
-				alternateSpinColor="7B1FA2"
-				className="bg-red-600 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg"
-					alt="IntelliJ IDEA"
-					class="w-5 h-5"
-				/>
-				<span>IntelliJ IDEA</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://developer.android.com/studio"
-				mainSpinColor="3DDC84"
-				alternateSpinColor="00796B"
-				className="bg-green-600 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg"
-					alt="Android Studio"
-					class="w-5 h-5"
-				/>
-				<span>Android Studio</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://code.visualstudio.com"
-				mainSpinColor="007ACC"
-				alternateSpinColor="005A9E"
-				className="bg-indigo-800 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
-					alt="VS Code"
-					class="w-5 h-5"
-				/>
-				<span>VS Code</span>
-			</AnimateAnchor>
-			<AnimateAnchor
-				href="https://www.docker.com"
-				mainSpinColor="2496ED"
-				alternateSpinColor="0b66a3"
-				className="bg-sky-800 text-zinc-100 gap-2 px-3 py-2"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg"
-					alt="Docker"
-					class="w-5 h-5"
-				/>
-				<span>Docker</span>
-			</AnimateAnchor>
+			<BadgeIntelliJ />
+			<BadgeAndroidStudio />
+			<BadgeVSCode />
+			<BadgeDocker />
 		</div>
 	</div>
 </section>

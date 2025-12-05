@@ -1,0 +1,161 @@
+---
+import BadgeAngular from "../../../shared/badges/BadgeAngular.astro";
+import BadgeCSS from "../../../shared/badges/BadgeCSS.astro";
+import BadgeHTML from "../../../shared/badges/BadgeHTML.astro";
+import BadgeIonic from "../../../shared/badges/BadgeIonic.astro";
+import BadgeJavaScript from "../../../shared/badges/BadgeJavaScript.astro";
+import BadgeJest from "../../../shared/badges/BadgeJest.astro";
+import BadgeNodeJS from "../../../shared/badges/BadgeNodeJS.astro";
+import BadgeSQL from "../../../shared/badges/BadgeSQL.astro";
+import BadgeTailwind from "../../../shared/badges/BadgeTailwind.astro";
+import BadgeTypeScript from "../../../shared/badges/BadgeTypeScript.astro";
+import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
+---
+
+<section
+	class="flex flex-col flex-wrap gap-8 text-primary py-12 px-4 animated-section bg-[rgba(0,0,0,0.34)] border-2 border-zinc-400"
+>
+	<h1
+		class="text-title font-extrabold bg-linear-to-b from-yellow-500 to-orange-800 bg-clip-text text-transparent text-center"
+	>
+		Proyectos
+	</h1>
+	<div class="grid grid-cols-2 gap-2">
+
+		<article
+			class="text-sm text-pretty p-6 flex flex-col gap-4 text-primary bg-[rgba(0,255,115,0.33)]"
+		>
+			<h1
+				class="text-4xl font-extrabold bg-linear-to-b from-emerald-100 to-emerald-500 bg-clip-text text-transparent text-center py-1"
+			>
+				Vita Weight
+			</h1>
+
+			<img
+				src="projects/vita-weight.png"
+				alt="imagen proyecto"
+				class="rounded-2xl"
+			/>
+
+			<p class="text-base text-center text-balance">
+				Aplicación móvil de seguimiento de peso, con un enfoque en la
+				experiencia de usuario y en la simplificación visual de datos.
+			</p>
+
+			<AnimateAnchor
+				href="https://play.google.com/store/apps/details?id=io.vitaweight.app"
+				mainSpinColor="00FF73"
+				alternateSpinColor="00B361"
+				className="bg-sky-800 text-zinc-100 gap-2 px-3 py-2"
+			>
+				<img
+					src="icons/google-play-store.png"
+					alt="Google play"
+					class="w-5 h-5"
+				/>
+				<span>Google Play Store</span>
+			</AnimateAnchor>
+
+			<div class="absolute bottom-9">
+				<h2 class="text-xl font-bold text-zinc-200 mb-2">Tech Stack</h2>
+				<ul class="flex flex-row flex-wrap gap-1 mt-2">
+					<BadgeIonic />
+					<BadgeAngular />
+					<BadgeTailwind />
+					<BadgeSQL />
+					<BadgeTypeScript />
+					<BadgeJavaScript />
+					<BadgeHTML />
+					<BadgeCSS />
+				</ul>
+			</div>
+		</article>
+
+		<!-- -------------------------- -->
+
+		<article
+			class="text-sm text-pretty p-6 flex flex-col gap-4 text-primary bg-[rgba(255,136,0,0.33)]"
+		>
+			<h1
+				class="text-4xl font-['Consolas'] font-extrabold bg-linear-to-b from-red-200 to-red-800 bg-clip-text text-transparent text-center py-1"
+			>
+				@giolc/logger
+			</h1>
+
+			<img
+				src="projects/logger.jpg"
+				alt="imagen proyecto"
+				class="rounded-2xl"
+			/>
+
+			<p class="text-base text-center text-balance">
+				Librería de logging ligera y extensible que permite gestionar
+				registros de aplicación con distintos niveles de severidad,
+				salida personalizable y soporte para web y backend.
+			</p>
+
+			<div class="flex flex-row flex-wrap justify-center gap-2">
+				<AnimateAnchor
+					href="https://www.npmjs.com/package/@giolc/logger"
+					mainSpinColor="A8A29E"
+					alternateSpinColor="FF0066"
+					className="bg-red-900 text-zinc-100 gap-2 px-4 py-2"
+				>
+					<img
+						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original.svg"
+						alt="NPM"
+						class="w-5 h-5"
+					/>
+					NPM
+				</AnimateAnchor>
+
+				<AnimateAnchor
+					href="https://github.com/DevGiovanniLC/giolc-logger/tree/main/packages/logger"
+					mainSpinColor="A8A29E"
+					alternateSpinColor="52525B"
+					className="bg-zinc-500 text-zinc-100 gap-2 px-4 py-2"
+				>
+					<img
+						src="icons/github-mark.svg"
+						alt="Logger GitHub"
+						class="w-5 h-5"
+					/>
+					GitHub
+				</AnimateAnchor>
+			</div>
+
+			<div>
+				<h2 class="text-xl font-bold text-zinc-200 mb-2">Tech Stack</h2>
+				<ul class="flex flex-row flex-wrap gap-1 mt-2">
+					<BadgeNodeJS />
+					<BadgeTypeScript />
+					<BadgeJavaScript />
+					<BadgeJest />
+				</ul>
+			</div>
+		</article>
+	</div>
+</section>
+
+<style>
+	article,
+	section {
+		border-radius: 18px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(15px);
+	}
+
+	@media screen and (max-width: 750px) {
+		div {
+			gap: 0.1rem;
+			max-width: 20rem;
+		}
+
+		section {
+            padding: 1em 0;
+			border-radius: 0;
+			border-top: 0;
+			border-bottom: 0;
+		}
+	}
+</style>
