@@ -2,7 +2,7 @@
 import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 ---
 
-<section class="flex flex-col gap-4 text-primary py-12 px-8 animated-section">
+<section class="flex flex-col gap-4 text-primary py-12 px-8 animated-section max-w-8/12 mx-auto">
 	<div
 		id="wrapper"
 		class="flex flex-row flex-wrap mb-2 ml-6 gap-6 items-center link-wrapper"
@@ -122,6 +122,8 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 		section {
 			border-radius: 0;
 			border-bottom: 0;
+            margin: 0;
+            max-width: 100%
 		}
 
 		.link-wrapper {
