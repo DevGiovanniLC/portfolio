@@ -6,9 +6,36 @@ import "../styles/global.css";
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Language" content="es" />
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="robots" content="index, follow" />
+
+		<meta name="author" content="Giovanni León Corujo" />
+		<meta
+			name="description"
+			content="Portfolio de Giovanni León Corujo - Ingeniero informático | Desarrollador Full Stack | QA Tester"
+		/>
+		<meta
+			name="keywords"
+			content="Portfolio, Giovanni León Corujo, Ingeniero informático, Desarrollador Full Stack, QA Tester, Busqueda de empleo"
+		/>
+
+		<meta property="og:title" content="Portfolio - Giovanni León Corujo" />
+		<meta
+			property="og:description"
+			content="Ingeniero informático | Desarrollador Full Stack | QA Tester"
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://portfolio-giovanni-lc.vercel.app/" />
+		<meta
+			property="og:image"
+			content="https://portfolio-giovanni-lc.vercel.app/og-image.png"
+		/>
+
 		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/png" href="/favicon.png" />
 		<title>Portfolio - Giovanni</title>
 	</head>
 	<body>
@@ -51,25 +78,25 @@ import "../styles/global.css";
 </style>
 
 <script>
-    import Lenis from "lenis";
+	import Lenis from "lenis";
 
-    // Detectar si es móvil por ancho de pantalla
-    const isMobile = window.innerWidth <= 750;
+	// Detectar si es móvil por ancho de pantalla
+	const isMobile = window.innerWidth <= 750;
 
-    // Solo inicializar Lenis si NO es móvil
-    if (!isMobile) {
-        const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            wheelMultiplier: 1,
-            touchMultiplier: 2,
-        });
+	// Solo inicializar Lenis si NO es móvil
+	if (!isMobile) {
+		const lenis = new Lenis({
+			duration: 1.2,
+			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+			wheelMultiplier: 1,
+			touchMultiplier: 2,
+		});
 
-        function raf(time: number) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
+		function raf(time: number) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
 
-        requestAnimationFrame(raf);
-    }
+		requestAnimationFrame(raf);
+	}
 </script>
