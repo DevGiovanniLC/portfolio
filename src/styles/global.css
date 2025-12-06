@@ -30,4 +30,8 @@ html {
     .tech-badge span {
         display: none;
     }
+
+    .tech-badge {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
 }
