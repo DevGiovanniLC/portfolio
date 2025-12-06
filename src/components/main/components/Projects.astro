@@ -24,7 +24,9 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 	>
 		Proyectos
 	</h1>
-	<div id="projects" class="grid grid-cols-2 gap-10 w-full justify-center">
+
+	<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
 		<article
 			id="vita-weight"
 			class="text-sm text-pretty p-6 flex flex-col gap-4 text-primary bg-[rgba(0,255,115,0.33)] rounded-xl"
@@ -309,10 +311,6 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 			margin: auto;
 			padding: 1em;
 			width: 90%;
-		}
-
-		#projects {
-			grid-template-columns: 1fr !important;
 		}
 	}
 </style>
