@@ -9,6 +9,9 @@ import BadgeNodeJS from "../../../shared/badges/BadgeNodeJS.astro";
 import BadgeSQL from "../../../shared/badges/BadgeSQL.astro";
 import BadgeTailwind from "../../../shared/badges/BadgeTailwind.astro";
 import BadgeTypeScript from "../../../shared/badges/BadgeTypeScript.astro";
+import BadgeJava from "../../../shared/badges/BadgeJava.astro";
+import BadgeKotlin from "../../../shared/badges/BadgeKotlin.astro";
+import BadgeAndroidStudio from "../../../shared/badges/BadgeAndroidStudio.astro";
 import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 ---
 
@@ -45,8 +48,8 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 
 				<AnimateAnchor
 					href="https://play.google.com/store/apps/details?id=io.vitaweight.app"
-					mainSpinColor="00FF73"
-					alternateSpinColor="00B361"
+					mainSpinColor="7ABBBF"
+					alternateSpinColor="00FF73"
 					className="bg-sky-800 text-zinc-100 gap-2 px-3 py-2"
 				>
 					<img
@@ -101,8 +104,8 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 				<div class="flex flex-row flex-wrap justify-center gap-2">
 					<AnimateAnchor
 						href="https://www.npmjs.com/package/@giolc/logger"
-						mainSpinColor="A8A29E"
-						alternateSpinColor="FF0066"
+						alternateSpinColor="A8A29E"
+						mainSpinColor="FF0066"
 						className="bg-red-900 text-zinc-100 gap-2 px-4 py-2"
 					>
 						<img
@@ -139,6 +142,56 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 				</ul>
 			</div>
 		</article>
+
+		<!-- -------------------------- -->
+
+		<article
+			class="text-sm text-pretty p-6 flex flex-col gap-4 text-primary bg-[rgba(138,43,226,0.33)]"
+		>
+			<h1
+				class="text-4xl font-extrabold bg-linear-to-b from-blue-200 to-blue-800 bg-clip-text text-transparent text-center py-1"
+			>
+				Rubik Solver
+			</h1>
+
+			<div class="flex flex-col flex-wrap gap-4">
+				<img
+					src="projects/rubik-solver.png"
+					alt="imagen proyecto"
+					class="rounded-2xl max-h-[250px] mx-auto"
+				/>
+
+				<p class="text-base text-center text-balance">
+					Aplicación móvil Android que resuelve cubos de Rubik 3x3 mediante
+					visión por computador. Utiliza OpenCV para detectar los colores del cubo,
+					el algoritmo de Kociemba para calcular la solución óptima, y OpenGL
+					para mostrar animaciones 3D de los movimientos paso a paso.
+				</p>
+
+				<AnimateAnchor
+					href="https://github.com/DevGiovanniLC/rubik-resolver"
+					mainSpinColor="A8A29E"
+					alternateSpinColor="52525B"
+					className="bg-zinc-500 text-zinc-100 gap-2 px-3 py-2"
+				>
+					<img
+						src="icons/github-mark.svg"
+						alt="Rubik Solver GitHub"
+						class="w-5 h-5"
+					/>
+					<span>GitHub</span>
+				</AnimateAnchor>
+			</div>
+
+			<div class="min-h-24">
+				<h2 class="text-xl font-bold text-zinc-200 mb-2">Tech Stack</h2>
+				<ul class="flex flex-row flex-wrap gap-1 mt-2">
+					<BadgeKotlin />
+					<BadgeJava />
+					<BadgeAndroidStudio />
+				</ul>
+			</div>
+		</article>
 	</div>
 </section>
 
@@ -151,7 +204,7 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 	}
 
 	article {
-        display: grid;
+		display: grid;
 		grid-template-rows: auto 1fr auto;
 	}
 
