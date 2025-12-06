@@ -12,6 +12,7 @@ import BadgeTypeScript from "../../../shared/badges/BadgeTypeScript.astro";
 import BadgeJava from "../../../shared/badges/BadgeJava.astro";
 import BadgeKotlin from "../../../shared/badges/BadgeKotlin.astro";
 import BadgeAndroidStudio from "../../../shared/badges/BadgeAndroidStudio.astro";
+import BadgeGo from "../../../shared/badges/BadgeGo.astro";
 import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 ---
 
@@ -189,6 +190,59 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 					<BadgeKotlin />
 					<BadgeJava />
 					<BadgeAndroidStudio />
+				</ul>
+			</div>
+		</article>
+
+		<!-- -------------------------- -->
+
+		<article
+			class="text-sm text-pretty p-6 flex flex-col gap-4 text-primary bg-[rgba(0,173,216,0.33)]"
+		>
+			<h1
+				class="text-4xl font-extrabold bg-linear-to-b from-cyan-200 to-cyan-800 bg-clip-text text-transparent text-center py-1"
+			>
+				WebCap
+			</h1>
+
+			<div class="flex flex-col flex-wrap gap-4">
+				<img
+					src="projects/webcap.png"
+					alt="imagen proyecto"
+					class="rounded-2xl max-h-[250px] mx-auto"
+				/>
+
+				<p class="text-base text-center text-balance">
+					Aplicación de escritorio multiplataforma para grabación de pantalla,
+					capturas y conversión de formatos de video. Desarrollada con Angular
+					y Wails (Go), ofrece ajustes personalizables de definición, framerate,
+					formato, retraso y selección de audio/pantalla con un diseño minimalista.
+				</p>
+
+				<AnimateAnchor
+					href="https://github.com/DevGiovanniLC/WebCap-Angular_Wails"
+					mainSpinColor="A8A29E"
+					alternateSpinColor="52525B"
+					className="bg-zinc-500 text-zinc-100 gap-2 px-3 py-2"
+				>
+					<img
+						src="icons/github-mark.svg"
+						alt="WebCap GitHub"
+						class="w-5 h-5"
+					/>
+					<span>GitHub</span>
+				</AnimateAnchor>
+			</div>
+
+			<div class="min-h-24">
+				<h2 class="text-xl font-bold text-zinc-200 mb-2">Tech Stack</h2>
+				<ul class="flex flex-row flex-wrap gap-1 mt-2">
+					<BadgeAngular />
+					<BadgeGo />
+					<BadgeTypeScript />
+					<BadgeJavaScript />
+					<BadgeHTML />
+					<BadgeCSS />
 				</ul>
 			</div>
 		</article>
