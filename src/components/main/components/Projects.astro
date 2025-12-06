@@ -30,32 +30,35 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 				Vita Weight
 			</h1>
 
-			<img
-				src="projects/vita-weight.png"
-				alt="imagen proyecto"
-				class="rounded-2xl max-h-[300px] mx-auto"
-			/>
-
-			<p class="text-base text-center text-balance">
-				Aplicación móvil de seguimiento de peso, con un enfoque en la
-				experiencia de usuario y en la simplificación visual de datos.
-			</p>
-
-			<AnimateAnchor
-				href="https://play.google.com/store/apps/details?id=io.vitaweight.app"
-				mainSpinColor="00FF73"
-				alternateSpinColor="00B361"
-				className="bg-sky-800 text-zinc-100 gap-2 px-3 py-2"
-			>
+			<div class="flex flex-col flex-wrap gap-4">
 				<img
-					src="icons/google-play-store.png"
-					alt="Google play"
-					class="w-5 h-5"
+					src="projects/vita-weight.png"
+					alt="imagen proyecto"
+					class="rounded-2xl max-h-[250px] mx-auto"
 				/>
-				<span>Google Play Store</span>
-			</AnimateAnchor>
 
-			<div>
+				<p class="text-base text-center text-balance">
+					Aplicación móvil de seguimiento de peso, con un enfoque en
+					la experiencia de usuario y en la simplificación visual de
+					datos.
+				</p>
+
+				<AnimateAnchor
+					href="https://play.google.com/store/apps/details?id=io.vitaweight.app"
+					mainSpinColor="00FF73"
+					alternateSpinColor="00B361"
+					className="bg-sky-800 text-zinc-100 gap-2 px-3 py-2"
+				>
+					<img
+						src="icons/google-play-store.png"
+						alt="Google play"
+						class="w-5 h-5"
+					/>
+					<span>Google Play Store</span>
+				</AnimateAnchor>
+			</div>
+
+			<div class="min-h-24">
 				<h2 class="text-xl font-bold text-zinc-200 mb-2">Tech Stack</h2>
 				<ul class="flex flex-row flex-wrap gap-1 mt-2">
 					<BadgeIonic />
@@ -81,49 +84,52 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 				@giolc/logger
 			</h1>
 
-			<img
-				src="projects/logger.jpg"
-				alt="imagen proyecto"
-				class="rounded-2xl max-h-[300px] mx-auto"
-			/>
+			<div class="flex flex-col flex-wrap gap-4">
+				<img
+					src="projects/logger.jpg"
+					alt="imagen proyecto"
+					class="rounded-2xl max-h-[250px] mx-auto"
+				/>
 
-			<p class="text-base text-center text-balance">
-				Librería de logging ligera y extensible que permite gestionar
-				registros de aplicación con distintos niveles de severidad,
-				salida personalizable y soporte para web y backend.
-			</p>
+				<p class="text-base text-center text-balance">
+					Librería de logging ligera y extensible que permite
+					gestionar registros de aplicación con distintos niveles de
+					severidad, salida personalizable y soporte para web y
+					backend.
+				</p>
 
-			<div class="flex flex-row flex-wrap justify-center gap-2">
-				<AnimateAnchor
-					href="https://www.npmjs.com/package/@giolc/logger"
-					mainSpinColor="A8A29E"
-					alternateSpinColor="FF0066"
-					className="bg-red-900 text-zinc-100 gap-2 px-4 py-2"
-				>
-					<img
-						src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original.svg"
-						alt="NPM"
-						class="w-5 h-5"
-					/>
-					NPM
-				</AnimateAnchor>
+				<div class="flex flex-row flex-wrap justify-center gap-2">
+					<AnimateAnchor
+						href="https://www.npmjs.com/package/@giolc/logger"
+						mainSpinColor="A8A29E"
+						alternateSpinColor="FF0066"
+						className="bg-red-900 text-zinc-100 gap-2 px-4 py-2"
+					>
+						<img
+							src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original.svg"
+							alt="NPM"
+							class="w-5 h-5"
+						/>
+						NPM
+					</AnimateAnchor>
 
-				<AnimateAnchor
-					href="https://github.com/DevGiovanniLC/giolc-logger/tree/main/packages/logger"
-					mainSpinColor="A8A29E"
-					alternateSpinColor="52525B"
-					className="bg-zinc-500 text-zinc-100 gap-2 px-4 py-2"
-				>
-					<img
-						src="icons/github-mark.svg"
-						alt="Logger GitHub"
-						class="w-5 h-5"
-					/>
-					GitHub
-				</AnimateAnchor>
+					<AnimateAnchor
+						href="https://github.com/DevGiovanniLC/giolc-logger/tree/main/packages/logger"
+						mainSpinColor="A8A29E"
+						alternateSpinColor="52525B"
+						className="bg-zinc-500 text-zinc-100 gap-2 px-4 py-2"
+					>
+						<img
+							src="icons/github-mark.svg"
+							alt="Logger GitHub"
+							class="w-5 h-5"
+						/>
+						GitHub
+					</AnimateAnchor>
+				</div>
 			</div>
 
-			<div>
+			<div class="min-h-24">
 				<h2 class="text-xl font-bold text-zinc-200 mb-2">Tech Stack</h2>
 				<ul class="flex flex-row flex-wrap gap-1 mt-2">
 					<BadgeNodeJS />
@@ -144,26 +150,29 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 		backdrop-filter: blur(15px);
 	}
 
-	@media screen and (max-width: 750px) {
+	article {
+        display: grid;
+		grid-template-rows: auto 1fr auto;
+	}
 
+	@media screen and (max-width: 750px) {
 		section {
-            padding: 1em 0;
-            margin: 0;
+			padding: 1em 0;
+			margin: 0;
 			border-radius: 0;
 			border-top: 0;
 			border-bottom: 0;
-            max-width: 100%;
+			max-width: 100%;
 		}
 
-        article {
-            margin: auto;
-            padding: 1em;
-            width: 90%;
-        }
+		article {
+			margin: auto;
+			padding: 1em;
+			width: 90%;
+		}
 
-
-        #projects {
-            grid-template-columns: 1fr !important;
-        }
+		#projects {
+			grid-template-columns: 1fr !important;
+		}
 	}
 </style>
