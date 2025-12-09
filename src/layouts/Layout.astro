@@ -28,7 +28,10 @@ import "../styles/global.css";
 			content="Ingeniero informático | Desarrollador Full Stack | QA Tester"
 		/>
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://portfolio-giovanni-lc.vercel.app/" />
+		<meta
+			property="og:url"
+			content="https://portfolio-giovanni-lc.vercel.app/"
+		/>
 		<meta
 			property="og:image"
 			content="https://portfolio-giovanni-lc.vercel.app/og-image.png"
@@ -80,11 +83,11 @@ import "../styles/global.css";
 <script>
 	import Lenis from "lenis";
 
-	// Detectar si es móvil por ancho de pantalla
-	const isMobile = window.innerWidth <= 750;
+	// Detectar si tiene soporte táctil (más confiable que user agent)
+	const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
 
-	// Solo inicializar Lenis si NO es móvil
-	if (!isMobile) {
+	// Solo inicializar Lenis si NO es dispositivo táctil
+	if (!isTouchDevice) {
 		const lenis = new Lenis({
 			duration: 1.2,
 			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
