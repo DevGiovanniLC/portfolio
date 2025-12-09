@@ -1,17 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
 <AnimateAnchor
 	href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
 	mainSpinColor="F7DF1E"
-	alternateSpinColor="a89d0e"
-	className="tech-badge bg-yellow-600 text-zinc-100 gap-1 px-2 py-1"
+	alternateSpinColor="F0DB4F"
+	className="tech-badge bg-yellow-700 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
+	<Image
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
 		alt="JavaScript"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
 	<span>JavaScript</span>
 </AnimateAnchor>

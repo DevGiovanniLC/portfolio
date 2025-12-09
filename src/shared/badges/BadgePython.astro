@@ -1,17 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
 <AnimateAnchor
 	href="https://www.python.org"
 	mainSpinColor="3776AB"
-	alternateSpinColor="1a3a5f"
-	className="tech-badge bg-green-800 text-zinc-100 gap-1 px-2 py-1"
+	alternateSpinColor="FFD43B"
+	className="tech-badge bg-blue-900 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
+	<Image
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
 		alt="Python"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
 	<span>Python</span>
 </AnimateAnchor>

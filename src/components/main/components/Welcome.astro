@@ -1,5 +1,11 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
+import perfilImage from "../../../../public/perfil.webp";
+import linkedinIcon from "../../../../public/icons/linkedin-mark.svg";
+import githubIcon from "../../../../public/icons/github-mark.svg";
+import hackerrankIcon from "../../../../public/icons/hackerrank-mark.svg";
+import tryhackmeIcon from "../../../../public/icons/tryhackme-mark.svg";
 ---
 
 <section class="flex flex-col gap-4 text-primary py-12 px-8 animated-section max-w-8/12 mx-auto">
@@ -7,10 +13,13 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 		id="wrapper"
 		class="flex flex-row flex-wrap mb-2 ml-6 gap-6 items-center link-wrapper"
 	>
-		<img
-			src="perfil.webp"
+		<Image
+			src={perfilImage}
 			alt="Giovanni León"
 			class="w-45 h-45 rounded-full select-none border-2 border-[#46ad6f]"
+			width={180}
+			height={180}
+			loading="eager"
 		/>
 
 		<div
@@ -22,10 +31,13 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 				alternateSpinColor="6BC8FF"
 				className="bg-sky-900 text-zinc-100 gap-2 px-3 py-2"
 			>
-				<img
-					src="icons/linkedin-mark.svg"
+				<Image
+					src={linkedinIcon}
 					alt="Giovanni León LinkedIn"
 					class="w-5 h-5"
+					width={20}
+					height={20}
+					loading="eager"
 				/>
 				Disponible para trabajar
 			</AnimateAnchor>
@@ -37,10 +49,13 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 					alternateSpinColor="52525B"
 					className="bg-zinc-500 text-zinc-100 gap-2 px-4 py-2"
 				>
-					<img
-						src="icons/github-mark.svg"
+					<Image
+						src={githubIcon}
 						alt="Giovanni León GitHub"
 						class="w-5 h-5"
+						width={20}
+						height={20}
+						loading="eager"
 					/>
 					GitHub
 				</AnimateAnchor>
@@ -51,10 +66,13 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 					alternateSpinColor="75FF76"
 					className="bg-green-800 text-zinc-100 gap-2 px-4 py-2"
 				>
-					<img
-						src="icons/hackerrank-mark.svg"
+					<Image
+						src={hackerrankIcon}
 						alt="Giovanni León HackerRank"
 						class="w-5 h-5"
+						width={20}
+						height={20}
+						loading="eager"
 					/>
 					HackerRank
 				</AnimateAnchor>
@@ -65,10 +83,13 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 					alternateSpinColor="2B0800"
 					className="bg-orange-900 text-zinc-100 gap-2 px-4 py-2"
 				>
-					<img
-						src="icons/tryhackme-mark.svg"
+					<Image
+						src={tryhackmeIcon}
 						alt="Giovanni León Try Hack Me"
 						class="w-5 h-5"
+						width={20}
+						height={20}
+						loading="eager"
 					/>
 					Try Hack Me
 				</AnimateAnchor>

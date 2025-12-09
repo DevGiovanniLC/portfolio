@@ -1,17 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
 <AnimateAnchor
 	href="https://www.docker.com"
 	mainSpinColor="2496ED"
-	alternateSpinColor="0b66a3"
-	className="tech-badge bg-sky-800 text-zinc-100 gap-1 px-2 py-1"
+	alternateSpinColor="1D63ED"
+	className="tech-badge bg-blue-900 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
-		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg"
+	<Image
+		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
 		alt="Docker"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
 	<span>Docker</span>
 </AnimateAnchor>

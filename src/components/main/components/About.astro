@@ -1,5 +1,8 @@
 ---
-
+import { Image } from "astro:assets";
+import inerzaLogo from "../../../../public/logos/inerza.webp";
+import ulpgcLogo from "../../../../public/logos/ulpgc.webp";
+import cifpLogo from "../../../../public/logos/cifp.webp";
 ---
 
 <section
@@ -66,10 +69,13 @@
 							target="_blank"
 							rel="noopener"
 						>
-							<img
+							<Image
 								class="w-8 h-8 rounded-full ml-2"
-								src="logos/inerza.webp"
+								src={inerzaLogo}
 								alt="Inerza logo"
+								width={32}
+								height={32}
+								loading="lazy"
 							/>
 						</a>
 					</h3>
@@ -128,10 +134,13 @@
 							target="_blank"
 							rel="noopener"
 						>
-							<img
+							<Image
 								class="w-8 h-8 rounded-full ml-2"
-								src="logos/ulpgc.webp"
+								src={ulpgcLogo}
 								alt="Universidad de Las Palmas de Gran Canaria logo"
+								width={32}
+								height={32}
+								loading="lazy"
 							/>
 						</a>
 					</h3>
@@ -147,10 +156,13 @@
 							target="_blank"
 							rel="noopener"
 						>
-							<img
+							<Image
 								class="w-8 h-8 rounded-full ml-2"
-								src="logos/cifp.webp"
+								src={cifpLogo}
 								alt="CIFP Tony Gallardo logo"
+								width={32}
+								height={32}
+								loading="lazy"
 							/>
 						</a>
 					</h3>

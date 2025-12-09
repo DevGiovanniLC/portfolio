@@ -1,17 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
 <AnimateAnchor
 	href="https://nodejs.org"
 	mainSpinColor="339933"
-	alternateSpinColor="1a5f1a"
-	className="tech-badge bg-green-700 text-zinc-100 gap-1 px-2 py-1"
+	alternateSpinColor="5FA04E"
+	className="tech-badge bg-green-900 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
+	<Image
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
-		alt="Node.js"
+		alt="NodeJS"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
-	<span>Node.js</span>
+	<span>NodeJS</span>
 </AnimateAnchor>

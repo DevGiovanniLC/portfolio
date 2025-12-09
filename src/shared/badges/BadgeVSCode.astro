@@ -1,17 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
 <AnimateAnchor
 	href="https://code.visualstudio.com"
 	mainSpinColor="007ACC"
-	alternateSpinColor="005A9E"
-	className="tech-badge bg-indigo-800 text-zinc-100 gap-1 px-2 py-1"
+	alternateSpinColor="0098FF"
+	className="tech-badge bg-blue-900 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
+	<Image
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
-		alt="VS Code"
+		alt="VSCode"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
-	<span>VS Code</span>
+	<span>VSCode</span>
 </AnimateAnchor>

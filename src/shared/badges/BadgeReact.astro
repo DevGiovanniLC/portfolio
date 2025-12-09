@@ -1,17 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
 <AnimateAnchor
-	href="https://reactjs.org"
+	href="https://react.dev"
 	mainSpinColor="61DAFB"
-	alternateSpinColor="1f6fa7"
-	className="tech-badge bg-blue-700 text-zinc-100 gap-1 px-2 py-1"
+	alternateSpinColor="20232A"
+	className="tech-badge bg-cyan-900 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
+	<Image
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
 		alt="React"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
 	<span>React</span>
 </AnimateAnchor>

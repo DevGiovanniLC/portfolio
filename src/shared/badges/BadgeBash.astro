@@ -1,17 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
 <AnimateAnchor
-	href="https://www.gnu.org/software/bash"
+	href="https://www.gnu.org/software/bash/"
 	mainSpinColor="4EAA25"
-	alternateSpinColor="000000"
-	className="tech-badge bg-green-900 text-zinc-100 gap-1 px-2 py-1"
+	alternateSpinColor="293137"
+	className="tech-badge bg-slate-700 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
+	<Image
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"
 		alt="Bash"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
 	<span>Bash</span>
 </AnimateAnchor>

@@ -1,17 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
 <AnimateAnchor
 	href="https://www.typescriptlang.org"
-	mainSpinColor="264DE4"
-	alternateSpinColor="1a2d7d"
-	className="tech-badge bg-blue-900 text-zinc-100 gap-1 px-2 py-1"
+	mainSpinColor="3178C6"
+	alternateSpinColor="235A97"
+	className="tech-badge bg-blue-800 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
+	<Image
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
 		alt="TypeScript"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
 	<span>TypeScript</span>
 </AnimateAnchor>

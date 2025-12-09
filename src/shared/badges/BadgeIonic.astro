@@ -1,17 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
 <AnimateAnchor
 	href="https://ionicframework.com"
-	mainSpinColor="3B82F6"
-	alternateSpinColor="1e40af"
-	className="tech-badge bg-blue-700 text-zinc-100 gap-1 px-2 py-1"
+	mainSpinColor="3880FF"
+	alternateSpinColor="5598FF"
+	className="tech-badge bg-blue-800 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
+	<Image
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ionic/ionic-original.svg"
 		alt="Ionic"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
 	<span>Ionic</span>
 </AnimateAnchor>

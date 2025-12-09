@@ -1,17 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
 <AnimateAnchor
 	href="https://jestjs.io"
 	mainSpinColor="C21325"
-	alternateSpinColor="7a0f1a"
-	className="tech-badge bg-pink-500 text-zinc-100 gap-1 px-2 py-1"
+	alternateSpinColor="99424F"
+	className="tech-badge bg-red-900 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
+	<Image
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg"
 		alt="Jest"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
 	<span>Jest</span>
 </AnimateAnchor>

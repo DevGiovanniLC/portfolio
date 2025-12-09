@@ -1,4 +1,5 @@
 ---
+    import { Image } from "astro:assets";
 import BadgeAngular from "../../../shared/badges/BadgeAngular.astro";
 import BadgeCSS from "../../../shared/badges/BadgeCSS.astro";
 import BadgeHTML from "../../../shared/badges/BadgeHTML.astro";
@@ -14,6 +15,12 @@ import BadgeKotlin from "../../../shared/badges/BadgeKotlin.astro";
 import BadgeAndroidStudio from "../../../shared/badges/BadgeAndroidStudio.astro";
 import BadgeGo from "../../../shared/badges/BadgeGo.astro";
 import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
+import vitaWeightImage from "../../../../public/projects/vita-weight.png";
+import loggerImage from "../../../../public/projects/logger.jpg";
+import rubikSolverImage from "../../../../public/projects/rubik-solver.png";
+import webcapImage from "../../../../public/projects/webcap.png";
+import googlePlayIcon from "../../../../public/icons/google-play-store.png";
+import githubIcon from "../../../../public/icons/github-mark.svg";
 ---
 
 <section
@@ -39,10 +46,13 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 			</h1>
 
 			<div class="flex flex-col flex-wrap gap-4">
-				<img
-					src="projects/vita-weight.png"
+				<Image
+					src={vitaWeightImage}
 					alt="imagen proyecto"
 					class="rounded-2xl max-h-[250px] mx-auto"
+					width={400}
+					height={250}
+					loading="lazy"
 				/>
 
 				<p class="text-base text-center text-balance">
@@ -57,10 +67,13 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 					alternateSpinColor="00FF73"
 					className="bg-sky-800 text-zinc-100 gap-2 px-3 py-2"
 				>
-					<img
-						src="icons/google-play-store.png"
+					<Image
+						src={googlePlayIcon}
 						alt="Google play"
 						class="w-5 h-5"
+						width={20}
+						height={20}
+						loading="lazy"
 					/>
 					<span>Google Play Store</span>
 				</AnimateAnchor>
@@ -94,10 +107,12 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 			</h1>
 
 			<div class="flex flex-col flex-wrap gap-4">
-				<img
-					src="projects/logger.jpg"
+				<Image
+					src={loggerImage}
 					alt="imagen proyecto"
 					class="rounded-2xl max-h-[250px] mx-auto"
+					height={250}
+					loading="lazy"
 				/>
 
 				<p class="text-base text-center text-balance">
@@ -114,11 +129,14 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 						mainSpinColor="FF0066"
 						className="bg-red-900 text-zinc-100 gap-2 px-4 py-2"
 					>
-						<img
-							src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original.svg"
-							alt="NPM"
-							class="w-5 h-5"
-						/>
+                        <Image
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original.svg"
+                            alt="NPM"
+                            class="w-5 h-5"
+                            width={20}
+                            height={20}
+                            loading="lazy"
+                        />
 						NPM
 					</AnimateAnchor>
 
@@ -128,10 +146,13 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 						alternateSpinColor="52525B"
 						className="bg-zinc-500 text-zinc-100 gap-2 px-4 py-2"
 					>
-						<img
-							src="icons/github-mark.svg"
+						<Image
+							src={githubIcon}
 							alt="Logger GitHub"
 							class="w-5 h-5"
+							width={20}
+							height={20}
+							loading="lazy"
 						/>
 						GitHub
 					</AnimateAnchor>
@@ -163,10 +184,11 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
             </h1>
 
 			<div class="flex flex-col flex-wrap gap-4">
-				<img
-					src="projects/rubik-solver.png"
+				<Image
+					src={rubikSolverImage}
 					alt="imagen proyecto"
 					class="rounded-2xl max-h-[250px] mx-auto"
+					height={250}
 				/>
 
 				<p class="text-base text-center text-balance">
@@ -182,10 +204,13 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 					alternateSpinColor="52525B"
 					className="bg-zinc-500 text-zinc-100 gap-2 px-3 py-2"
 				>
-					<img
-						src="icons/github-mark.svg"
+					<Image
+						src={githubIcon}
 						alt="Rubik Solver GitHub"
 						class="w-5 h-5"
+						width={20}
+						height={20}
+						loading="lazy"
 					/>
 					<span>GitHub</span>
 				</AnimateAnchor>
@@ -214,10 +239,11 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
             </h1>
 
 			<div class="flex flex-col flex-wrap gap-4">
-				<img
-					src="projects/webcap.png"
+				<Image
+					src={webcapImage}
 					alt="imagen proyecto"
 					class="rounded-2xl max-h-[250px] mx-auto"
+					height={250}
 				/>
 
 				<p class="text-base text-center text-balance">
@@ -233,10 +259,13 @@ import AnimateAnchor from "../../../templates/AnimateAnchor.astro";
 					alternateSpinColor="52525B"
 					className="bg-zinc-500 text-zinc-100 gap-2 px-3 py-2"
 				>
-					<img
-						src="icons/github-mark.svg"
+					<Image
+						src={githubIcon}
 						alt="WebCap GitHub"
 						class="w-5 h-5"
+						width={20}
+						height={20}
+						loading="lazy"
 					/>
 					<span>GitHub</span>
 				</AnimateAnchor>

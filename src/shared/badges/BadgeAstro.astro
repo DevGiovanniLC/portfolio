@@ -1,17 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
 <AnimateAnchor
 	href="https://astro.build"
 	mainSpinColor="FF5D01"
-	alternateSpinColor="994001"
-	className="tech-badge bg-purple-600 text-zinc-100 gap-1 px-2 py-1"
+	alternateSpinColor="C73AFF"
+	className="tech-badge bg-purple-900 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
+	<Image
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg"
 		alt="Astro"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
 	<span>Astro</span>
 </AnimateAnchor>

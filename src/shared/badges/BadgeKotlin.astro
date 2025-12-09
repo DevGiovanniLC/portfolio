@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
@@ -6,12 +7,15 @@ import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 	href="https://kotlinlang.org"
 	mainSpinColor="7F52FF"
 	alternateSpinColor="5A3BB8"
-	className="tech-badge bg-orange-900 text-zinc-100 gap-1 px-2 py-1"
+	className="tech-badge bg-purple-900 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
+	<Image
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"
 		alt="Kotlin"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
 	<span>Kotlin</span>
 </AnimateAnchor>

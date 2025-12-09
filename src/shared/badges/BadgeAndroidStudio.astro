@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 ---
 
@@ -8,10 +9,13 @@ import AnimateAnchor from "../../templates/AnimateAnchor.astro";
 	alternateSpinColor="00796B"
 	className="tech-badge bg-green-600 text-zinc-100 gap-1 px-2 py-1"
 >
-	<img
+	<Image
 		src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg"
 		alt="Android Studio"
 		class="w-4 h-4"
+		width={16}
+		height={16}
+		loading="lazy"
 	/>
 	<span>Android Studio</span>
 </AnimateAnchor>
