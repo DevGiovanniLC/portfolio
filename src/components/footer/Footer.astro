@@ -1,8 +1,83 @@
 ---
-
+import BadgeAstro from "../../shared/badges/BadgeAstro.astro";
+import BadgeTailwind from "../../shared/badges/BadgeTailwind.astro";
+import BadgeTypeScript from "../../shared/badges/BadgeTypeScript.astro";
 ---
 
-<footer class="my-4 text-center text-sm text-primary">
-	&copy; {new Date().getFullYear()} Giovanni León Corujo.
-	<p>Casi todos los derechos reservados.</p>
+<footer class="w-full border-t border-zinc-700/50 bg-linear-to-b from-transparent to-zinc-950/50 backdrop-blur-sm mt-20 animated-section">
+	<div class="max-w-7xl mx-auto px-8 py-12">
+		<!-- Navegación Rápida -->
+		<nav class="mb-8">
+			<h3 class="text-lg font-bold text-zinc-100 mb-4 text-center">Navegación Rápida</h3>
+			<ul class="flex flex-wrap justify-center gap-4 text-sm">
+				<li>
+					<a href="#welcome" class="text-zinc-400 hover:text-cyan-400 transition-colors">
+						Inicio
+					</a>
+				</li>
+				<li class="text-zinc-600">•</li>
+				<li>
+					<a href="#about" class="text-zinc-400 hover:text-orange-400 transition-colors">
+						Sobre Mí
+					</a>
+				</li>
+				<li class="text-zinc-600">•</li>
+				<li>
+					<a href="#projects" class="text-zinc-400 hover:text-pink-400 transition-colors">
+						Proyectos
+					</a>
+				</li>
+				<li class="text-zinc-600">•</li>
+				<li>
+					<a href="#certifications" class="text-zinc-400 hover:text-emerald-400 transition-colors">
+						Certificaciones
+					</a>
+				</li>
+				<li class="text-zinc-600">•</li>
+				<li>
+					<a href="#techs" class="text-zinc-400 hover:text-fuchsia-400 transition-colors">
+						Tech Stack
+					</a>
+				</li>
+				<li class="text-zinc-600">•</li>
+				<li>
+					<a href="#contact" class="text-zinc-400 hover:text-purple-400 transition-colors">
+						Contacto
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Tecnologías Usadas -->
+		<div class="mb-8 text-center">
+			<p class="text-zinc-400 text-sm mb-3">Construido con</p>
+			<div class="flex justify-center items-center gap-2 flex-wrap">
+				<BadgeAstro />
+				<BadgeTailwind />
+				<BadgeTypeScript />
+			</div>
+		</div>
+
+		<!-- Separador -->
+		<div class="w-full h-px bg-linear-to-r from-transparent via-zinc-700 to-transparent mb-6"></div>
+
+		<!-- Copyright -->
+		<div class="text-center text-sm text-zinc-400">
+			<p>&copy; {new Date().getFullYear()} Giovanni León Corujo.</p>
+			<p class="text-xs text-zinc-500 mt-1">Casi todos los derechos reservados.</p>
+		</div>
+	</div>
 </footer>
+
+<style>
+	@media screen and (max-width: 750px) {
+		footer {
+			border-radius: 0;   
+		}
+
+		footer nav ul {
+			gap: 0.5rem;
+			font-size: 0.875rem;
+		}
+	}
+</style>
