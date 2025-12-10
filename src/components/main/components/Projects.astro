@@ -1,5 +1,5 @@
 ---
-    import { Image } from "astro:assets";
+import { Image } from "astro:assets";
 import BadgeAngular from "../../../shared/badges/BadgeAngular.astro";
 import BadgeCSS from "../../../shared/badges/BadgeCSS.astro";
 import BadgeHTML from "../../../shared/badges/BadgeHTML.astro";
@@ -24,6 +24,7 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 ---
 
 <section
+    id="projects"
 	class="flex flex-col flex-wrap gap-8 text-primary py-12 px-8 animated-section bg-[rgba(0,0,0,0.34)] border-2 border-amber-500 max-w-11/12 mx-auto"
 >
 	<h1
@@ -33,13 +34,12 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 	</h1>
 
 	<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        
 		<article
 			id="vita-weight"
 			class="text-sm text-pretty p-6 flex flex-col gap-4 text-primary bg-[rgba(0,255,115,0.33)] rounded-xl"
 		>
 			<h1
-                id="vita-weight"
+				id="vita-weight"
 				class="text-4xl font-extrabold bg-linear-to-b from-emerald-100 to-emerald-500 bg-clip-text text-transparent text-center py-1"
 			>
 				Vita Weight
@@ -97,7 +97,7 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 		<!-- -------------------------- -->
 
 		<article
-            id="giolc-logger"
+			id="giolc-logger"
 			class="text-sm text-pretty p-6 flex flex-col gap-4 text-primary bg-[rgba(255,136,0,0.33)] rounded-xl"
 		>
 			<h1
@@ -129,14 +129,14 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 						mainSpinColor="FF0066"
 						className="bg-red-900 text-zinc-100 gap-2 px-4 py-2"
 					>
-                        <Image
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original.svg"
-                            alt="NPM"
-                            class="w-5 h-5"
-                            width={20}
-                            height={20}
-                            loading="lazy"
-                        />
+						<Image
+							src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original.svg"
+							alt="NPM"
+							class="w-5 h-5"
+							width={20}
+							height={20}
+							loading="lazy"
+						/>
 						NPM
 					</AnimateAnchor>
 
@@ -173,15 +173,15 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 		<!-- -------------------------- -->
 
 		<article
-            id="rubik-solver"
+			id="rubik-solver"
 			class="text-sm text-pretty p-6 flex flex-col gap-4 text-primary bg-[rgba(40,160,252,0.51)] rounded-xl"
 		>
-            <h1
-                class="text-4xl font-['Courier_New','monospace'] font-extrabold text-center py-1"
-                style="background: linear-gradient(90deg, #FF0000 0%, #FFFF00 60%, #00FF00 70%, #FFFFFF 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"
-            >
-                Rubik Solver
-            </h1>
+			<h1
+				class="text-4xl font-['Courier_New','monospace'] font-extrabold text-center py-1"
+				style="background: linear-gradient(90deg, #FF0000 0%, #FFFF00 60%, #00FF00 70%, #FFFFFF 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;"
+			>
+				Rubik Solver
+			</h1>
 
 			<div class="flex flex-col flex-wrap gap-4">
 				<Image
@@ -192,10 +192,11 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 				/>
 
 				<p class="text-base text-center text-balance">
-					Aplicación móvil Android que resuelve cubos de Rubik 3x3 mediante
-					visión por computador. Utiliza OpenCV para detectar los colores del cubo,
-					el algoritmo de Kociemba para calcular la solución óptima, y OpenGL
-					para mostrar animaciones 3D de los movimientos paso a paso.
+					Aplicación móvil Android que resuelve cubos de Rubik 3x3
+					mediante visión por computador. Utiliza OpenCV para detectar
+					los colores del cubo, el algoritmo de Kociemba para calcular
+					la solución óptima, y OpenGL para mostrar animaciones 3D de
+					los movimientos paso a paso.
 				</p>
 
 				<AnimateAnchor
@@ -229,14 +230,14 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 		<!-- -------------------------- -->
 
 		<article
-            id="webcap"
+			id="webcap"
 			class="text-sm text-pretty p-6 flex flex-col gap-4 text-primary bg-[rgba(255,255,255,0.22)] rounded-xl"
 		>
-            <h1
-                class="text-4xl font-extrabold bg-linear-to-b to-zinc-200 from-zinc-800 bg-clip-text text-transparent text-center py-1"
-            >
-                WebCap
-            </h1>
+			<h1
+				class="text-4xl font-extrabold bg-linear-to-b to-zinc-200 from-zinc-800 bg-clip-text text-transparent text-center py-1"
+			>
+				WebCap
+			</h1>
 
 			<div class="flex flex-col flex-wrap gap-4">
 				<Image
@@ -247,10 +248,11 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 				/>
 
 				<p class="text-base text-center text-balance">
-					Aplicación de escritorio multiplataforma para grabación de pantalla,
-					capturas y conversión de formatos de video. Desarrollada con Angular
-					y Wails (Go), ofrece ajustes personalizables de definición, framerate,
-					formato, retraso y selección de audio/pantalla con un diseño minimalista.
+					Aplicación de escritorio multiplataforma para grabación de
+					pantalla, capturas y conversión de formatos de video.
+					Desarrollada con Angular y Wails (Go), ofrece ajustes
+					personalizables de definición, framerate, formato, retraso y
+					selección de audio/pantalla con un diseño minimalista.
 				</p>
 
 				<AnimateAnchor
@@ -288,14 +290,14 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 
 <style>
 	article,
-	section {
+	#projects {
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(15px);
 	}
 
-    section {
-        border-radius: 18px;
-    }
+	#projects {
+		border-radius: 18px;
+	}
 
 	article {
 		display: grid;
@@ -326,14 +328,31 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 	}
 
 	@media screen and (max-width: 750px) {
-		section {
-			padding: 1em 0;
+		#projects {
+			padding: 4rem 0;
 			margin: 0;
 			border-radius: 0;
-			border-top: 0;
-			border-bottom: 0;
+			border: 0;
 			max-width: 100%;
-            padding-top:  4em;
+			position: relative;
+		}
+
+		/* Difuminado superior */
+		#projects::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 120px;
+			background: linear-gradient(
+				to top,
+				transparent 0%,
+				rgba(31, 31, 31, 0.3) 50%,
+				rgba(0, 0, 0, 0.163) 100%
+			);
+			pointer-events: none;
+			z-index: 1;
 		}
 
 		article {

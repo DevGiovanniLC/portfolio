@@ -6,6 +6,7 @@ import cifpLogo from "../../../../public/logos/cifp.webp";
 ---
 
 <section
+    id="about"
 	class="flex flex-col gap-8 text-primary py-12 px-8 animated-section bg-[rgba(0,0,0,0.34)] border-2 border-sky-400 max-w-11/12 mx-auto"
 >
 	<h1
@@ -272,7 +273,7 @@ import cifpLogo from "../../../../public/logos/cifp.webp";
 </section>
 
 <style>
-	section {
+	#about {
 		border-radius: 18px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(15px);
@@ -308,15 +309,47 @@ import cifpLogo from "../../../../public/logos/cifp.webp";
 	}
 
 	@media screen and (max-width: 750px) {
-		section {
-			padding: 1em 0;
-			margin: 0;
+		#about {
+			padding: 4rem 0;
 			border-radius: 0;
-			border-top: 0;
-			border-bottom: 0;
+			border: 0;
 			max-width: 100%;
 			box-shadow: 0 4px 20px rgba(14, 14, 14, 0.8);
-            padding-top:  4em;
+		}
+
+		/* Difuminado superior */
+		#about::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 50px;
+			background: linear-gradient(
+				to top,
+				transparent 0%,
+				rgba(0, 25, 8, 0.258) 100%
+			);
+			pointer-events: none;
+			z-index: 1;
+		}
+
+		/* Difuminado inferior */
+		#about::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 120px;
+			background: linear-gradient(
+				to bottom,
+				transparent 0%,
+				rgba(31, 31, 31, 0.3) 50%,
+				rgba(0, 0, 0, 0.247) 100%
+			);
+			pointer-events: none;
+			z-index: 1;
 		}
 
 		article {

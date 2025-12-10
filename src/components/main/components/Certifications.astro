@@ -123,12 +123,42 @@ import cert3 from '/public/certifications/hackerrank-python.png';
 	@media screen and (max-width: 750px) {
 		#certifications {
 			max-width: 100%;
-			padding: 2rem 4rem;
+			padding: 4rem 3rem;
             border-radius: 0;
-            border-top: 0;
-            border-bottom: 0;
+            border: 0;
             max-width: 100%;
             width: 100%;
+		}
+
+        #certifications::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(
+                to top,
+                transparent 0%,
+                rgba(9, 9, 9, 0.739) 100%
+            );
+            pointer-events: none;
+            z-index: 1;
+        }
+		#certifications::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100px;
+			background: linear-gradient(
+				to bottom,
+				transparent 0%,
+				rgba(0, 0, 0, 0.818) 100%
+			);
+			pointer-events: none;
+			z-index: 1;
 		}
 	}
 </style>

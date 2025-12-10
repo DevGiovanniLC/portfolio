@@ -164,11 +164,30 @@
 	@media screen and (max-width: 750px) {
         
 		#contact {
-            border-top: 0;
+			padding: 4rem 1rem;
+            border: 0;
             border-radius: 0;
 			max-width: 100%;
-			padding: 2rem 1rem;
+            width: 100%;
 		}
+
+		/* Difuminado superior */
+		#contact::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 100px;
+			background: linear-gradient(
+				to top,
+				transparent 0%,
+				rgba(6, 0, 7, 0.802) 100%
+			);
+			pointer-events: none;
+			z-index: 1;
+		}
+
         #contact .wrapper {
             gap: 1rem;
         }
