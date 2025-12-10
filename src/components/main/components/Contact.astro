@@ -13,15 +13,15 @@
 		Contacto
 	</h1>
 
-	<div class="flex flex-row flex-wrap justify-center gap-8 w-full max-w-2xl">
+	<div class="flex flex-row flex-wrap justify-center gap-10 w-full max-w-2xl wrapper">
 		<!-- Email -->
 		<a
 			href="mailto:vita.weight.app@gmail.com"
-			class="text-sm text-purple-400 hover:text-purple-300 transition-colors"
+			class="text-sm text-purple-400 hover:text-purple-300 transition-colors size-fit"
 		>
 			<article
 				id="email-contact"
-				class="contact-card flex flex-wrap items-center gap-4 p-6 rounded-lg backdrop-blur-md border border-zinc-700/50"
+				class="contact-card flex flex-wrap items-center gap-4 p-4 rounded-lg backdrop-blur-md border border-zinc-700/50 size-fit"
 			>
 				<div
 					class="shrink-0 w-12 h-12 flex items-center justify-center"
@@ -40,8 +40,8 @@
 						></path>
 					</svg>
 				</div>
-                <h3 class="text-lg font-bold text-zinc-100">Email</h3>
-				<div class="flex-1">
+                <h3 class="text-base font-bold text-zinc-100">Email</h3>
+				<div class="flex-1 text-xs">
 					vita.weight.app@gmail.com
 				</div>
 			</article>
@@ -52,11 +52,11 @@
 			href="https://linkedin.com/in/giovanni-lc"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+			class="text-sm text-blue-400 hover:text-blue-300 transition-colors size-fit"
 		>
 			<article
 				id="linkedin-contact"
-				class="contact-card flex items-center flex-wrap gap-4 p-6 rounded-lg backdrop-blur-md border border-zinc-700/50"
+				class="contact-card flex items-center flex-wrap gap-4 p-4 rounded-lg backdrop-blur-md border border-zinc-700/50 size-fit"
 			>
 				<div
 					class="shrink-0 w-12 h-12 flex items-center justify-center"
@@ -71,22 +71,22 @@
 						></path>
 					</svg>
 				</div>
-				<h3 class="text-lg font-bold text-zinc-100">LinkedIn</h3>
-				<div class="flex-1">linkedin.com/in/giovanni-lc</div>
+				<h3 class="text-base font-bold text-zinc-100">LinkedIn</h3>
+				<div class="flex-1 text-xs">linkedin.com/in/giovanni-lc</div>
 			</article>
 		</a>
-
+        
 		<!-- GitHub -->
+        <a
+            href="https://github.com/DevGiovanniLC"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm text-zinc-300 hover:text-zinc-100 transition-colors flex flex-row flex-wrap items-center gap-4"
+        >
 		<article
 			id="github-contact"
-			class="contact-card flex items-center gap-4 p-6 rounded-lg backdrop-blur-md border border-zinc-700/50"
+			class="contact-card flex flex-wrap items-center gap-4 p-4 rounded-lg backdrop-blur-md border border-zinc-700/50 size-fit"
 		>
-			<a
-				href="https://github.com/DevGiovanniLC"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="text-sm text-zinc-300 hover:text-zinc-100 transition-colors flex flex-row flex-wrap items-center gap-4"
-			>
 				<div
 					class="shrink-0 w-12 h-12 flex items-center justify-center"
 				>
@@ -100,21 +100,21 @@
 						></path>
 					</svg>
 				</div>
-				<h3 class="text-lg font-bold text-zinc-100">GitHub</h3>
-				<div class="flex-2">github.com/DevGiovanniLC</div>
-			</a>
-		</article>
+				<h3 class="text-base font-bold text-zinc-100">GitHub</h3>
+				<p class="flex-2 text-xs w-full">github.com/DevGiovanniLC</p>
+            </article>
+        </a>
 
         <!-- Instagram -->
         <a
             href="https://instagram.com/giova_lc"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-sm text-pink-400 hover:text-pink-300 transition-colors"
+            class="text-sm text-pink-400 hover:text-pink-300 transition-colors size-fit"
         >
             <article
                 id="instagram-contact"
-                class="contact-card flex items-center flex-wrap gap-4 p-6 rounded-lg backdrop-blur-md border border-zinc-700/50"
+                class="contact-card flex items-center flex-wrap gap-4 p-4 rounded-lg backdrop-blur-md border border-zinc-700/50"
             >
                 <div
                     class="shrink-0 w-12 h-12 flex items-center justify-center"
@@ -129,8 +129,8 @@
                         ></path>
                     </svg>
                 </div>
-                <h3 class="text-lg font-bold text-zinc-100">Instagram</h3>
-                <div class="flex-1">@giova_lc</div>
+                <h3 class="text-base font-bold text-zinc-100">Instagram</h3>
+                <p class="text-xs w-full">@giova_lc</p>
             </article>
         </a>
 	</div>
@@ -153,7 +153,7 @@
 			rgba(236, 72, 153, 0.05) 100%
 		);
 		transition: all 0.3s ease;
-		max-width: 250px;
+		max-width: 200px;
 	}
 
 	.contact-card:hover {
@@ -162,14 +162,20 @@
 	}
 
 	@media screen and (max-width: 750px) {
-        section{
+        
+		#contact {
             border-top: 0;
             border-radius: 0;
-        }
-
-		#contact {
 			max-width: 100%;
 			padding: 2rem 1rem;
 		}
+        #contact .wrapper {
+            gap: 1rem;
+        }
+
+        .contact-card {
+            max-height: 110px;
+            max-width: 180px;
+        }
 	}
 </style>
