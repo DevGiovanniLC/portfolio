@@ -1,7 +1,200 @@
 ---
-
+import { Image } from "astro:assets";
+import favicon from "../../../public/favicon.png";
 ---
 
-<header>
-    
+<header
+	id="header"
+	class="fixed top-0 left-0 right-0 z-50 bg-[rgba(23,23,23,0.4)] backdrop-blur-md w-full"
+>
+	<nav
+		class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4"
+	>
+    <div class="flex flex-row gap-2 items-center justify-center">
+		<Image
+			src={favicon}
+			alt="Portfolio"
+			class="w-10 h-10 rounded-lg group-hover:scale-110 transition-transform"
+			width={40}
+			height={40}
+			loading="eager"
+		/>
+		<span class="text-lg font-bold text-zinc-100 hidden sm:block">
+			Portfolio
+		</span>
+    </div>
+
+		<!-- Navegación Desktop -->
+		<ul class="hidden md:flex items-center gap-4">
+			<li>
+				<a
+					href="#about"
+					class="nav-link text-sky-400 hover:text-sky-300"
+				>
+					Sobre Mí
+				</a>
+			</li>
+			<li>
+				<a
+					href="#projects"
+					class="nav-link text-amber-600 hover:text-amber-400"
+				>
+					Proyectos
+				</a>
+			</li>
+			<li>
+				<a
+					href="#certifications"
+					class="nav-link text-purple-400 hover:text-purple-300"
+				>
+					Certificaciones
+				</a>
+			</li>
+			<li>
+				<a
+					href="#techs"
+					class="nav-link text-fuchsia-400 hover:text-fuchsia-300"
+				>
+					Tech Stack
+				</a>
+			</li>
+			<li>
+				<a
+					href="#contact"
+					class="nav-link text-pink-400 hover:text-purple-300"
+				>
+					Contacto
+				</a>
+			</li>
+		</ul>
+
+		<!-- Menú Móvil - Hamburger -->
+		<button
+			id="menu-toggle"
+			class="md:hidden flex flex-col gap-1.5 w-8 h-8 justify-center items-center group"
+			aria-label="Toggle menu"
+		>
+			<span
+				class="block w-6 h-0.5 bg-zinc-300 transition-all group-hover:bg-cyan-400"
+			></span>
+			<span
+				class="block w-6 h-0.5 bg-zinc-300 transition-all group-hover:bg-cyan-400"
+			></span>
+			<span
+				class="block w-6 h-0.5 bg-zinc-300 transition-all group-hover:bg-cyan-400"
+			></span>
+		</button>
+	</nav>
+
+	<!-- Menú Móvil Desplegable -->
+	<div
+		id="mobile-menu"
+		class="hidden md:hidden border-t border-zinc-700/50 bg-zinc-950/98 backdrop-blur-lg"
+	>
+		<ul class="flex flex-col p-4 gap-2">
+			<li>
+				<a
+					href="#about"
+					class="mobile-nav-link text-orange-400 hover:text-orange-300"
+				>
+					Sobre Mí
+				</a>
+			</li>
+			<li>
+				<a
+					href="#projects"
+					class="mobile-nav-link text-pink-400 hover:text-pink-300"
+				>
+					Proyectos
+				</a>
+			</li>
+			<li>
+				<a
+					href="#certifications"
+					class="mobile-nav-link text-emerald-400 hover:text-emerald-300"
+				>
+					Certificaciones
+				</a>
+			</li>
+			<li>
+				<a
+					href="#techs"
+					class="mobile-nav-link text-fuchsia-400 hover:text-fuchsia-300"
+				>
+					Tech Stack
+				</a>
+			</li>
+			<li>
+				<a
+					href="#contact"
+					class="mobile-nav-link text-purple-400 hover:text-purple-300"
+				>
+					Contacto
+				</a>
+			</li>
+		</ul>
+	</div>
 </header>
+
+<style>
+	.nav-link {
+		padding: 0.5rem 1rem;
+		font-size: 0.875rem;
+		font-weight: 500;
+		border-radius: 0.5rem;
+		transition: all 0.3s ease;
+		display: block;
+	}
+
+	.nav-link:hover {
+		background-color: rgba(255, 255, 255, 0.05);
+		transform: translateY(-1px);
+	}
+
+	.mobile-nav-link {
+		padding: 0.75rem 1rem;
+		font-size: 1rem;
+		font-weight: 500;
+		border-radius: 0.5rem;
+		transition: all 0.3s ease;
+		display: block;
+	}
+
+	.mobile-nav-link:hover {
+		background-color: rgba(255, 255, 255, 0.05);
+		padding-left: 1.5rem;
+	}
+
+	/* Animación del menú hamburguesa */
+	#menu-toggle.active span:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	#menu-toggle.active span:nth-child(2) {
+		opacity: 0;
+	}
+
+	#menu-toggle.active span:nth-child(3) {
+		transform: rotate(-45deg) translate(5px, -5px);
+	}
+</style>
+
+<script>
+	// Toggle menú móvil
+	const menuToggle = document.getElementById("menu-toggle");
+	const mobileMenu = document.getElementById("mobile-menu");
+
+	menuToggle?.addEventListener("click", () => {
+		menuToggle.classList.toggle("active");
+		mobileMenu?.classList.toggle("hidden");
+	});
+
+	// Cerrar menú al hacer clic en un enlace
+	const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+	mobileLinks.forEach((link) => {
+		link.addEventListener("click", () => {
+			menuToggle?.classList.remove("active");
+			mobileMenu?.classList.add("hidden");
+		});
+	});
+</script>
