@@ -36,12 +36,32 @@ const {
 			this.canvas = canvas;
 			this.x = Math.random() * window.innerWidth;
 			this.y = Math.random() * window.innerHeight;
-			this.vx = (Math.random() - 0.5) * speed;
-			this.vy = (Math.random() - 0.5) * speed;
+			this.baseVx = (Math.random() - 0.5) * speed;
+			this.baseVy = (Math.random() - 0.5) * speed;
+			this.vx = this.baseVx;
+			this.vy = this.baseVy;
 			this.radius = particleSize;
 		}
 
-		update() {
+		update(mouseX, mouseY) {
+			// Calcular distancia al mouse
+			const dx = this.x - mouseX;
+			const dy = this.y - mouseY;
+			const distance = Math.sqrt(dx * dx + dy * dy);
+			const repulsionRadius = 100;
+
+			// Si el mouse está cerca, aplicar repulsión
+			if (distance < repulsionRadius) {
+				const force = (repulsionRadius - distance) / repulsionRadius;
+				const angle = Math.atan2(dy, dx);
+				this.vx += Math.cos(angle) * force * 0.5;
+				this.vy += Math.sin(angle) * force * 0.5;
+			}
+
+			// Aplicar fricción para volver a la velocidad base
+			this.vx += (this.baseVx - this.vx) * 0.05;
+			this.vy += (this.baseVy - this.vy) * 0.05;
+
 			this.x += this.vx;
 			this.y += this.vy;
 
@@ -49,8 +69,14 @@ const {
 			const maxHeight = window.innerHeight;
 
 			// Rebotar en los bordes
-			if (this.x < 0 || this.x > maxWidth) this.vx *= -1;
-			if (this.y < 0 || this.y > maxHeight) this.vy *= -1;
+			if (this.x < 0 || this.x > maxWidth) {
+				this.vx *= -1;
+				this.baseVx *= -1;
+			}
+			if (this.y < 0 || this.y > maxHeight) {
+				this.vy *= -1;
+				this.baseVy *= -1;
+			}
 
 			// Mantener dentro del canvas
 			this.x = Math.max(0, Math.min(maxWidth, this.x));
@@ -71,10 +97,12 @@ const {
 			this.ctx = this.canvas.getContext("2d");
 			this.particles = [];
 			this.animationId = null;
+			this.mouse = { x: -9999, y: -9999 };
 
 			this.resizeCanvas();
 			this.init();
 			this.setupResizeHandler();
+			this.setupMouseHandler();
 			this.animate();
 		}
 
@@ -89,7 +117,7 @@ const {
 			const dpr = window.devicePixelRatio || 1;
 			const width = window.innerWidth;
 			const height = window.innerHeight;
-			
+
 			this.canvas.width = width * dpr;
 			this.canvas.height = height * dpr;
 			this.canvas.style.width = `${width}px`;
@@ -105,19 +133,38 @@ const {
 					const distance = Math.sqrt(dx * dx + dy * dy);
 
 					if (distance < connectionDistance) {
-						const opacity = (1 - distance / connectionDistance) * 0.5;
+						const opacity =
+							(1 - distance / connectionDistance) * 0.5;
 						this.ctx.strokeStyle = lineColor.replace(
 							/[\d.]+\)$/,
-							`${opacity})`
+							`${opacity})`,
 						);
 						this.ctx.lineWidth = 1;
 						this.ctx.beginPath();
-						this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
-						this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
+						this.ctx.moveTo(
+							this.particles[i].x,
+							this.particles[i].y,
+						);
+						this.ctx.lineTo(
+							this.particles[j].x,
+							this.particles[j].y,
+						);
 						this.ctx.stroke();
 					}
 				}
 			}
+		}
+
+		setupMouseHandler() {
+			window.addEventListener("mousemove", (e) => {
+				this.mouse.x = e.clientX;
+				this.mouse.y = e.clientY;
+			});
+
+			window.addEventListener("mouseleave", () => {
+				this.mouse.x = -9999;
+				this.mouse.y = -9999;
+			});
 		}
 
 		animate() {
@@ -125,7 +172,7 @@ const {
 
 			// Actualizar y dibujar partículas
 			this.particles.forEach((particle) => {
-				particle.update();
+				particle.update(this.mouse.x, this.mouse.y);
 				particle.draw(this.ctx);
 			});
 
@@ -170,6 +217,8 @@ const {
 		position: fixed;
 		top: 0;
 		left: 0;
+		width: 100vw;
+		height: 100vh;
 		z-index: 0;
 		pointer-events: none;
 		background: transparent;
