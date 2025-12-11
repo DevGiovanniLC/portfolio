@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import cert1 from '/public/certifications/udemy-javascript.png';
-import cert2 from '/public/certifications/hackerrank-javascript.png';
-import cert3 from '/public/certifications/hackerrank-python.png';
+import cert1 from "/public/certifications/udemy-javascript.png";
+import cert2 from "/public/certifications/hackerrank-javascript.png";
+import cert3 from "/public/certifications/hackerrank-python.png";
 ---
 
 <section
@@ -10,7 +10,7 @@ import cert3 from '/public/certifications/hackerrank-python.png';
 	class="flex flex-col gap-10 text-primary justify-center items-center py-12 px-8 animated-section max-w-8/12 mx-auto"
 >
 	<h1
-		class="text-title font-extrabold bg-linear-to-b  from-blue-400 to-purple-800 bg-clip-text text-transparent"
+		class="text-title font-extrabold bg-linear-to-b from-blue-400 to-purple-800 bg-clip-text text-transparent"
 	>
 		Certificaciones
 	</h1>
@@ -18,91 +18,98 @@ import cert3 from '/public/certifications/hackerrank-python.png';
 	<div
 		class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl"
 	>
-    <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-ea8bb4dd-1b50-4a06-9cdb-64fbf74f95f5.pdf " target="_blank" rel="noopener noreferrer">
-		<article
-			id="cert-1"
-			class="certification-card flex flex-col gap-4 p-6 rounded-lg backdrop-blur-md border border-zinc-700/50"
+		<a
+			href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-ea8bb4dd-1b50-4a06-9cdb-64fbf74f95f5.pdf "
+			target="_blank"
+			rel="noopener noreferrer"
 		>
-			<div class="relative overflow-hidden rounded-sm ">
+			<article
+				id="cert-1"
+				class="certification-card flex flex-col gap-4 p-6 rounded-lg backdrop-blur-md border border-zinc-700/50"
+			>
 				<Image
-                    src={cert1}
+					src={cert1}
 					alt="Maestría en JavaScript​: Desde Principiante Hasta Experto"
-					class="w-full h-full object-cover"
+					class="w-full h-full object-cover rounded-lg"
 					width={600}
 					height={400}
 					loading="lazy"
 				/>
-			</div>
-			<div class="flex flex-col gap-2">
-				<h3 class="text-lg font-bold text-zinc-100">
-                    Maestría en JavaScript​: Desde Principiante Hasta Experto
-				</h3>
-				<p class="text-sm text-zinc-400">Udemy • 2025</p>
-				<p class="text-sm text-zinc-300 line-clamp-2">
-				</p>
-			</div>
-		</article>
-    </a>
 
-    <a href="https://www.hackerrank.com/certificates/00f80e47222e" target="_blank" rel="noopener noreferrer">
-		<article
-			id="cert-2"
-			class="certification-card flex flex-col gap-4 p-6 rounded-lg backdrop-blur-md border border-zinc-700/50 h-full"
+				<div class="flex flex-col gap-2">
+					<h3 class="text-lg font-bold text-zinc-100">
+						Maestría en JavaScript​: Desde Principiante Hasta
+						Experto
+					</h3>
+					<p class="text-sm text-zinc-400">Udemy • 2025</p>
+					<p class="text-sm text-zinc-300 line-clamp-2"></p>
+				</div>
+			</article>
+		</a>
+
+		<a
+			href="https://www.hackerrank.com/certificates/00f80e47222e"
+			target="_blank"
+			rel="noopener noreferrer"
 		>
-			<div class="relative overflow-hidden rounded-sm">
+			<article
+				id="cert-2"
+				class="certification-card flex flex-col gap-4 p-6 rounded-lg backdrop-blur-md border border-zinc-700/50 h-full"
+			>
 				<Image
-                    src={cert2}
+					src={cert2}
 					alt="JavaScript Certificate"
-					class="w-full h-full object-cover"
+					class="rounded-lg"
 					width={600}
 					height={400}
 					loading="lazy"
 				/>
-			</div>
-			<div class="flex flex-col gap-2">
-				<h3 class="text-lg font-bold text-zinc-100">
-                    JavaScript Certificate
-				</h3>
-				<p class="text-sm text-zinc-400">HackerRank • 2024</p>
-				<p class="text-sm text-zinc-300 line-clamp-2">
-				</p>
-			</div>
-		</article>
-    </a>
-    <a href="https://www.hackerrank.com/certificates/4f6e1a99f1c7" target="_blank" rel="noopener noreferrer">
-		<article
-			id="cert-3"
-			class="certification-card flex flex-col gap-4 p-6 rounded-lg backdrop-blur-md border border-zinc-700/50 h-full"
+
+				<div class="flex flex-col gap-2">
+					<h3 class="text-lg font-bold text-zinc-100">
+						JavaScript Certificate
+					</h3>
+					<p class="text-sm text-zinc-400">HackerRank • 2024</p>
+					<p class="text-sm text-zinc-300 line-clamp-2"></p>
+				</div>
+			</article>
+		</a>
+		<a
+			href="https://www.hackerrank.com/certificates/4f6e1a99f1c7"
+			target="_blank"
+			rel="noopener noreferrer"
 		>
-			<div class="relative overflow-hidden rounded-sm">
+			<article
+				id="cert-3"
+				class="certification-card flex flex-col gap-4 p-6 rounded-lg backdrop-blur-md border border-zinc-700/50 h-full"
+			>
 				<Image
-                    src={cert3}
+					src={cert3}
 					alt="Python Certificate"
-					class="w-full h-full object-cover"
+					class="rounded-lg"
 					width={600}
 					height={400}
 					loading="lazy"
 				/>
-			</div>
-			<div class="flex flex-col gap-2">
-				<h3 class="text-lg font-bold text-zinc-100">
-                    Python Certificate
-				</h3>
-				<p class="text-sm text-zinc-400">HackerRank • 2022</p>
-				<p class="text-sm text-zinc-300 line-clamp-2">
-				</p>
-			</div>
-		</article>
-    </a>
+
+				<div class="flex flex-col gap-2">
+					<h3 class="text-lg font-bold text-zinc-100">
+						Python Certificate
+					</h3>
+					<p class="text-sm text-zinc-400">HackerRank • 2022</p>
+					<p class="text-sm text-zinc-300 line-clamp-2"></p>
+				</div>
+			</article>
+		</a>
 	</div>
 </section>
 
 <style>
-	section {
-        background: rgba(100, 1, 146, 0.165);
+	#certifications {
+		background: rgba(100, 1, 146, 0.165);
 		border-radius: 18px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(15px);
+		backdrop-filter: blur(6px);
 		border: 2px solid #b700ff;
 	}
 
@@ -124,41 +131,11 @@ import cert3 from '/public/certifications/hackerrank-python.png';
 		#certifications {
 			max-width: 100%;
 			padding: 4rem 3rem;
-            border-radius: 0;
-            border: 0;
-            max-width: 100%;
-            width: 100%;
-		}
-
-        #certifications::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 80px;
-            background: linear-gradient(
-                to top,
-                transparent 0%,
-                rgba(9, 9, 9, 0.739) 100%
-            );
-            pointer-events: none;
-            z-index: 1;
-        }
-		#certifications::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			height: 100px;
-			background: linear-gradient(
-				to bottom,
-				transparent 0%,
-				rgba(0, 0, 0, 0.818) 100%
-			);
-			pointer-events: none;
-			z-index: 1;
+			border-radius: 0;
+			border: 0;
+			max-width: 100%;
+			width: 100%;
+			box-shadow: 0;
 		}
 	}
 </style>

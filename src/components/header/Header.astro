@@ -5,27 +5,37 @@ import favicon from "../../../public/favicon.png";
 
 <header
 	id="header"
-	class="fixed top-0 left-0 right-0 z-50 bg-[rgba(23,23,23,0.4)] backdrop-blur-lg w-full"
+	class="fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ease-in-out"
 >
 	<nav
-		class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4"
+		id="header-nav"
+		class="mx-auto px-6 py-4 flex items-center justify-end sm:justify-between gap-4 transition-all duration-500 ease-in-out"
 	>
-    <div class="flex flex-row gap-2 items-center justify-center">
-		<Image
-			src={favicon}
-			alt="Portfolio"
-			class="w-10 h-10 rounded-lg group-hover:scale-110 transition-transform"
-			width={40}
-			height={40}
-			loading="eager"
-		/>
-		<span class="text-lg font-bold text-zinc-100 hidden sm:block">
-			Portfolio
-		</span>
-    </div>
+		<div class="flex-row gap-2 items-center justify-center hidden sm:flex">
+			<Image
+                id="logo-image"
+				src={favicon}
+				alt="Portfolio"
+				class="w-10 h-10 rounded-lg group-hover:scale-110 transition-transform"
+				width={40}
+				height={40}
+				loading="eager"
+			/>
+			<span class="text-lg font-bold text-zinc-100 ">
+				Portfolio
+			</span>
+		</div>
 
 		<!-- Navegación Desktop -->
 		<ul class="hidden md:flex items-center gap-4">
+			<li>
+				<a
+					href="#welcome"
+					class="nav-link text-emerald-400 hover:text-emerald-300"
+				>
+					Inicio
+				</a>
+			</li>
 			<li>
 				<a
 					href="#about"
@@ -53,7 +63,7 @@ import favicon from "../../../public/favicon.png";
 			<li>
 				<a
 					href="#techs"
-					class="nav-link text-fuchsia-400 hover:text-fuchsia-300"
+					class="nav-link text-zinc-300 hover:text-zinc-200"
 				>
 					Tech Stack
 				</a>
@@ -94,8 +104,16 @@ import favicon from "../../../public/favicon.png";
 		<ul class="flex flex-col p-4 gap-2">
 			<li>
 				<a
+					href="#welcome"
+					class="mobile-nav-link text-emerald-400 hover:text-emerald-300"
+				>
+					Inicio
+				</a>
+			</li>
+			<li>
+				<a
 					href="#about"
-					class="mobile-nav-link text-orange-400 hover:text-orange-300"
+					class="mobile-nav-link text-sky-400 hover:text-sky-300"
 				>
 					Sobre Mí
 				</a>
@@ -103,7 +121,7 @@ import favicon from "../../../public/favicon.png";
 			<li>
 				<a
 					href="#projects"
-					class="mobile-nav-link text-pink-400 hover:text-pink-300"
+					class="mobile-nav-link text-amber-600 hover:text-amber-400"
 				>
 					Proyectos
 				</a>
@@ -111,7 +129,7 @@ import favicon from "../../../public/favicon.png";
 			<li>
 				<a
 					href="#certifications"
-					class="mobile-nav-link text-emerald-400 hover:text-emerald-300"
+					class="mobile-nav-link text-purple-400 hover:text-purple-300"
 				>
 					Certificaciones
 				</a>
@@ -119,7 +137,7 @@ import favicon from "../../../public/favicon.png";
 			<li>
 				<a
 					href="#techs"
-					class="mobile-nav-link text-fuchsia-400 hover:text-fuchsia-300"
+					class="mobile-nav-link text-zinc-300 hover:text-zinc-200"
 				>
 					Tech Stack
 				</a>
@@ -127,7 +145,7 @@ import favicon from "../../../public/favicon.png";
 			<li>
 				<a
 					href="#contact"
-					class="mobile-nav-link text-purple-400 hover:text-purple-300"
+					class="mobile-nav-link text-pink-400 hover:text-pink-300"
 				>
 					Contacto
 				</a>
@@ -164,6 +182,10 @@ import favicon from "../../../public/favicon.png";
 		background-color: rgba(255, 255, 255, 0.05);
 		padding-left: 1.5rem;
 	}
+    #mobile-menu {
+        border-radius: 1em;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
 
 	/* Animación del menú hamburguesa */
 	#menu-toggle.active span:nth-child(1) {
@@ -176,6 +198,43 @@ import favicon from "../../../public/favicon.png";
 
 	#menu-toggle.active span:nth-child(3) {
 		transform: rotate(-45deg) translate(5px, -5px);
+	}
+
+	/* Estados del header */
+	#header {
+		background-color: transparent;
+	}
+
+	#header.scrolled {
+		padding: 0.5rem 1rem;
+	}
+
+	#header-nav {
+		max-width: 100%;
+		border-radius: 0;
+	}
+
+	#header.scrolled #header-nav {
+		max-width: 60rem;
+		border-radius: 1rem;
+		background-color: rgba(49, 49, 49, 0.7);
+        backdrop-filter: blur(5px);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+	}
+
+	@media screen and (max-width: 768px) {
+		#header.scrolled #header-nav {
+			max-width: 100%;
+            border-radius: 0 0 1em 1em;
+            padding: 0.5rem 0.2rem;
+            background: none;
+            box-shadow: none;
+            backdrop-filter: none;
+		}
+
+        #header.scrolled {
+            padding: 0;
+        }
 	}
 </style>
 
@@ -196,5 +255,21 @@ import favicon from "../../../public/favicon.png";
 			menuToggle?.classList.remove("active");
 			mobileMenu?.classList.add("hidden");
 		});
+	});
+
+	// Efecto scroll en el header
+	const header = document.getElementById("header");
+	let lastScroll = 0;
+
+	window.addEventListener("scroll", () => {
+		const currentScroll = window.pageYOffset;
+
+		if (currentScroll > 50) {
+			header?.classList.add("scrolled");
+		} else {
+			header?.classList.remove("scrolled");
+		}
+
+		lastScroll = currentScroll;
 	});
 </script>

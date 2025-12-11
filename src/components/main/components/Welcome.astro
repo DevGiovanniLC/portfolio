@@ -18,7 +18,7 @@ import hackerrankIcon from "../../../../public/icons/hackerrank-mark.svg";
 		<Image
 			src={perfilImage}
 			alt="Giovanni León"
-			class="w-45 h-45 rounded-full select-none border-2 border-[#46ad6f]"
+			class="w-45 h-45 rounded-full select-none border-2 border-[#46ad6f] pointer-events-none"
 			width={180}
 			height={180}
 			loading="eager"
@@ -112,11 +112,11 @@ import hackerrankIcon from "../../../../public/icons/hackerrank-mark.svg";
 </section>
 
 <style>
-	section {
-		background: rgba(49, 135, 85, 0.338);
-		border-radius: 18px;
+	#welcome {
+		background: rgba(49, 135, 85, 0.2);
+		backdrop-filter: blur(5px);
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(15px);
+		border-radius: 18px;
 		border: 2px solid #6bffa6;
 	}
 
@@ -129,25 +129,9 @@ import hackerrankIcon from "../../../../public/icons/hackerrank-mark.svg";
 			border-radius: 0;
 			border: 0;
 			max-width: 100%;
-			padding-top: 6rem;
+			padding-top: 4.5rem;
 			padding-bottom: 4rem;
-		}
-
-		/* Difuminado inferior */
-		#welcome::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			height: 100px;
-			background: linear-gradient(
-				to bottom,
-				transparent 0%,
-				rgba(8, 0, 0, 0.625) 100%
-			);
-			pointer-events: none;
-			z-index: 1;
+			box-shadow: 0;
 		}
 
 		.link-wrapper {

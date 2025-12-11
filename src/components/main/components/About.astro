@@ -274,9 +274,10 @@ import cifpLogo from "../../../../public/logos/cifp.webp";
 
 <style>
 	#about {
+        background: rgba(0, 0, 0, 0.5);
+		backdrop-filter: blur(5px);
 		border-radius: 18px;
-		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(15px);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.309);
 	}
 
 	article {
@@ -314,42 +315,7 @@ import cifpLogo from "../../../../public/logos/cifp.webp";
 			border-radius: 0;
 			border: 0;
 			max-width: 100%;
-			box-shadow: 0 4px 20px rgba(14, 14, 14, 0.8);
-		}
-
-		/* Difuminado superior */
-		#about::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 50px;
-			background: linear-gradient(
-				to top,
-				transparent 0%,
-				rgba(0, 25, 8, 0.258) 100%
-			);
-			pointer-events: none;
-			z-index: 1;
-		}
-
-		/* Difuminado inferior */
-		#about::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			height: 120px;
-			background: linear-gradient(
-				to bottom,
-				transparent 0%,
-				rgba(31, 31, 31, 0.3) 50%,
-				rgba(0, 0, 0, 0.247) 100%
-			);
-			pointer-events: none;
-			z-index: 1;
+			box-shadow: 0;
 		}
 
 		article {
