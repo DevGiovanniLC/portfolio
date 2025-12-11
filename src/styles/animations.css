@@ -38,6 +38,6 @@
         animation-timeline: view(), view();
         
         /* Rango para la animación de entrada y para la de salida */
-        animation-range: entry 20% cover 50%, exit 0% exit 60%;
+        animation-range: entry 0% cover 50%, exit 0% exit 70%;
     }
 }
