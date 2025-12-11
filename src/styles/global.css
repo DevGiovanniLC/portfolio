@@ -24,7 +24,12 @@ html {
     --font-title: var(--text-title-font);
 }
 
-
+.main-section {
+    @apply mx-auto items-center py-12 px-8 text-primary justify-center;
+    border-radius: 18px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
 
 @media screen and (max-width: 750px) {
 
@@ -35,4 +40,5 @@ html {
     .tech-badge {
         background-color: rgba(0, 0, 0, 0.9);
     }
+
 }

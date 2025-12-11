@@ -105,11 +105,11 @@ import cert3 from "/public/certifications/hackerrank-python.png";
 </section>
 
 <style>
-	section {
+	#certifications {
 		background: rgba(100, 1, 146, 0.165);
 		border-radius: 18px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(15px);
+		backdrop-filter: blur(6px);
 		border: 2px solid #b700ff;
 	}
 
@@ -135,37 +135,7 @@ import cert3 from "/public/certifications/hackerrank-python.png";
 			border: 0;
 			max-width: 100%;
 			width: 100%;
-		}
-
-		#certifications::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 80px;
-			background: linear-gradient(
-				to top,
-				transparent 0%,
-				rgba(9, 9, 9, 0.739) 100%
-			);
-			pointer-events: none;
-			z-index: 1;
-		}
-		#certifications::after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			height: 100px;
-			background: linear-gradient(
-				to bottom,
-				transparent 0%,
-				rgba(0, 0, 0, 0.818) 100%
-			);
-			pointer-events: none;
-			z-index: 1;
+			box-shadow: 0;
 		}
 	}
 </style>

@@ -24,8 +24,8 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 ---
 
 <section
-    id="projects"
-	class="flex flex-col flex-wrap gap-8 text-primary py-12 px-8 animated-section bg-[rgba(0,0,0,0.34)] border-2 border-amber-500 max-w-11/12 mx-auto"
+	id="projects"
+	class="main-section animated-section flex flex-col flex-wrap gap-8 max-w-11/12"
 >
 	<h1
 		class="text-title font-extrabold bg-linear-to-b from-yellow-500 to-orange-800 bg-clip-text text-transparent text-center"
@@ -291,11 +291,12 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 	article,
 	#projects {
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(15px);
+		backdrop-filter: blur(5px);
 	}
 
 	#projects {
-		border-radius: 18px;
+		background: rgba(0, 0, 0, 0.5);
+        border: 2px solid #d48a22;
 	}
 
 	article {
@@ -333,25 +334,7 @@ import githubIcon from "../../../../public/icons/github-mark.svg";
 			border-radius: 0;
 			border: 0;
 			max-width: 100%;
-			position: relative;
-		}
-
-		/* Difuminado superior */
-		#projects::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			height: 120px;
-			background: linear-gradient(
-				to top,
-				transparent 0%,
-				rgba(31, 31, 31, 0.3) 50%,
-				rgba(0, 0, 0, 0.163) 100%
-			);
-			pointer-events: none;
-			z-index: 1;
+			box-shadow: 0;
 		}
 
 		article {
