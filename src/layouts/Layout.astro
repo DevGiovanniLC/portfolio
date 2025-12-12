@@ -1,7 +1,10 @@
 ---
-import FloatingParticles from "@/components/FloatingParticles.astro";
-import Analytics from "@vercel/analytics/astro";
 import "../styles/global.css";
+import FloatingParticles from "@/components/FloatingParticles.astro";
+
+//@Vercel
+import Analytics from "@vercel/analytics/astro";
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 ---
 
 <!doctype html>
@@ -44,6 +47,7 @@ import "../styles/global.css";
 		<title>Portfolio - Giovanni</title>
 	</head>
 	<Analytics />
+    <SpeedInsights />
 	<body>
 		<FloatingParticles
 			particleCount={50}
