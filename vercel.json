@@ -1,5 +1,8 @@
 {
-    "error": {
-        "404": "/"
-    }
+    "rewrites": [
+        {
+            "source": "/:path*",
+            "destination": "/index.html"
+        }
+    ]
 }
