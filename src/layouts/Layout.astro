@@ -1,5 +1,6 @@
 ---
 import FloatingParticles from "@/components/FloatingParticles.astro";
+import Analytics from "@vercel/analytics/astro";
 import "../styles/global.css";
 ---
 
@@ -42,6 +43,7 @@ import "../styles/global.css";
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<title>Portfolio - Giovanni</title>
 	</head>
+	<Analytics />
 	<body>
 		<FloatingParticles
 			particleCount={50}
@@ -64,7 +66,7 @@ import "../styles/global.css";
 		width: 100%;
 		min-height: 100vh;
 		grid-template-rows: auto 1fr auto;
-		background-image: linear-gradient(100deg, #272727 0%, #000000 100%);
+		background-image: linear-gradient(125deg, #1d1d1d 0%, #000000 80%);
 		font-family: "Inter", sans-serif;
 	}
 </style>

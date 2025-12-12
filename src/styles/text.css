@@ -2,5 +2,5 @@
     --text-title-size: clamp(1.75rem, 5vw, 3rem);
     --text-subtitle-size: clamp(1.5rem, 4vw, 1.8rem);
     --text-base-size: clamp(1rem, 2.5vw, 1.2rem);
-    --text-title-font : 'poppins', sans-serif;
+    --text-title-font : 'Roboto', 'Segoe UI', sans-serif;
 }
