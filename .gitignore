@@ -1,11 +1,13 @@
 # build output
 dist/
+deploy.sh
 
 
 .TODO
 
 # generated types
 .astro/
+
 
 # dependencies
 node_modules/
