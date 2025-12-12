@@ -4,7 +4,7 @@ import FloatingParticles from "@/components/FloatingParticles.astro";
 
 //@Vercel
 import Analytics from "@vercel/analytics/astro";
-import  SpeedInsights  from "@vercel/speed-insights/astro"
+import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
@@ -43,11 +43,17 @@ import  SpeedInsights  from "@vercel/speed-insights/astro"
 		/>
 
 		<meta name="generator" content={Astro.generator} />
+        
+		<meta
+			name="google-site-verification"
+			content="itrgX9vUqUC18uxxjWEHYd_m2igfZBaX_7z6Xo-tgdE"
+		/>
+
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<title>Portfolio - Giovanni</title>
 	</head>
 	<Analytics />
-    <SpeedInsights />
+	<SpeedInsights />
 	<body>
 		<FloatingParticles
 			particleCount={60}
